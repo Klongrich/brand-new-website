@@ -16,7 +16,7 @@
 				<li> <a href="coding.html"> Programming </a> </li>
 				<li> <a href="travel.html"> Travel </a> </li>
 				<li> <a href="tradding.html"> Trading </a> </li>
-				<li> <a href="#about"> About </a> </li>
+				<li> <a href="about.html"> About </a> </li>
 			</ul>
 		</nav>
 		
@@ -26,12 +26,12 @@
 			<script>
 			  // Save scroll position before leaving the page
 			  window.addEventListener("beforeunload", function () {
-			    localStorage.setItem("codingScrollPosition", window.scrollY);
+			    localStorage.setItem("aboutScrollPosition", window.scrollY);
 			  });
 
 			  // Restore scroll position when coming back
 			  window.addEventListener("load", function () {
-			    const scrollPosition = localStorage.getItem("codingScrollPosition");
+			    const scrollPosition = localStorage.getItem("aboutScrollPosition");
 			    if (scrollPosition) {
 			      window.scrollTo(0, parseInt(scrollPosition, 10));
 			    }
@@ -73,7 +73,7 @@
 		
 	</body>
 	<footer>
-		<h4> Contact Me: Longrichk@gmail.com </h4>
+		<h4> Contact Me: Longrichk@icloud.com </h4>
 	</footer>
 
 </html>
