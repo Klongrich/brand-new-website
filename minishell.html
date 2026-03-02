@@ -23,12 +23,30 @@
 		<main>
 			<div>
 				<h2> Minishell </h2>
-				<h2> Before we get to minishell let's break down the library that we'll be implementing </h>
+				<h2> Before we get to minishell let's break down the library that we'll be implementing </h2>
 				<h2> This library is called libft </h2>
+				
+				<div>
+				<a href="#atoi">atoi</a>
+				<a href="#bzero">bzero</a>
+				<a href="#isalnum">isalnum</a>
+				<a href="#isascii">isascii</a>
+				<a href="#isdigit">isdigit</a>
+				<a href="#isprint">isprint</a>
+				<a href="#itoa">itoa</a>
+				<a href="#lstadd">lstadd</a>
+				<a href="#lstdel">lstdel</a>
+				<a href="#lstdelone">lstdelone</a>
+				<a href="#lstiter">lstiter</a>
+				<a href="#lstnew">lstnew</a>
+				<a href="#memalloc">memalloc</a>
+			</div>
+			
 			</div>
 				<br> <br> <br>
 				<div class="container">
 				<div>
+					<h2> Makefile </h2>
 					<p> At the top of the file we are declaring variables that can be called from later in the make file. NAME is the file it is going to produce, in this case, libft.a. INCLUDES targets the includes folders which are the location of the .h or header files for the C code. FLAGS is setting gcc compiler flags that check for extra things outside a normal gcc file_name compilation. CC is the compiler options in this case, it is gcc. OBJ are the object files that come from compiling the c files with gcc. 
 					</p>
 
@@ -55,8 +73,8 @@
 				<div>
 					<img src="./imgs/libftMakeFile.png" alt=""> </img>
 				</div>
-				
-				<div>
+					
+				<div id="atoi">
 					<h2> ATOI </h2>
 					
 	<p> Here we have the ft_atoi function. This function takes in an array of characters then converts them to a integer. The parameter is an array of characters defined by the *str called str. Two variables, a long called result as well as an integer called sign, are declared on top. They are then initialized to 0 than 1 before starting the first while loop. </p>
@@ -78,7 +96,7 @@ The final return value is multiplied by the sign to return the final value that 
 					<img src="./imgs/libft/atoi.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="bzero">
 <h2> bzero </h2>
 <p> Here we take in 2 parameters. A void variable called *s which is a pointer to the location in memory a particular variable is stored at, then a size_t called n. size_t is an unsigned integer representing the length of an array. We then use the ft_memset function that we shall cover later. It is essentially setting the memory of the pointed s to zero. </p>
 				</div>
@@ -87,13 +105,122 @@ The final return value is multiplied by the sign to return the final value that 
 					<img src="./imgs/libft/bzero.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="isalnum">
 <h2> isalnum </h2>
 <p> This function takes in an integer c then states if it is an ascii value that would represent a character of 0 - 9, a - z, or A - Z. it returns 1 if it does, otherwise, it returns 0 </p>
 				</div>
 				
 				<div>
 					<img src="./imgs/libft/isalnum.png" alt=""> </img>
+				</div>
+				
+				<div id="isascii">
+<h2> isascii </h2>
+<p> This function returns a 1 if the integer is within the range of the ascii table, otherwise it returns 0 </p>
+</div>
+				
+				<div>
+					<img src="./imgs/libft/isascii.png" alt=""> </img>
+				</div>
+				
+				<div id="isdigit">
+		<h2> isdigit </h2>
+		<p> returns a 1 if the value of c is between '0' or '9' relative to the ascii table </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/isdigit.png" alt=""> </img>
+				</div>
+				
+				<div id="isprint">
+<h2> isprint </h2>
+<p> returns a 1 if the value of c is a printable character within the ascii table, otherwise a 0 is returned </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/isprint.png" alt=""> </img>
+				</div>
+				
+				<div id="itoa">
+<h2> itoa </h2>
+<p> This function is used to convert an integer into a character array. First we create three variables. A character array called str, an integer called i, then a long called num. Next, we sent num equal to n by casting a long variable on the integer. Then we use a function from the stdlib called malloc to allocate memory to the character array we initialized. We typecast a character array by using (char *) before calling malloc. We then set the amount of memory to malloc by calling the sizeof(char) * len(n) + 1. We use a + 1 to ensure room to add the '0\' null pointer to make sure we end the character array. </p>
+
+<p> The len functino takes a parameter call n. Then we initialize an integer called i. We then set i equal to 0. Next we check to see if n is less than zero to see if it is a negative number. We iterate i here to account for the extra space needed to store the '-' sign in the character array. We then turn n into a positive number. Next, we check if n is equal to 0. if it is we again increment i to account for that character in the new character array. Next, we run a while loop on n while dividing it by 10 in order to figure out how many spaces or characters are going to be needed in order to properly allocate the necessary memory for the new character array that is going to store the text value of the number. After we return i which has the length of the new character array needed to properly allocate storage for it. </p>
+					
+<p>
+Next, we do some error handling in case we get a null return, we exit the function while returning 0. None of the remaining code should be executed. Next, we set i equal to the length of the number. Check again if the number is negative. If it is, we make it positive while setting the first character in our array to '-'. Then if the number is zero, we then set the first character in our array to 0. Then we increment back from i. Next we run a while loop on num. We are then setting each index in the str array to the corresponding value of (num % 10) + '0'. Then divide num by 10. Say we have the number 123. First (123 % 10) + '0' turns into 3 + '0' giving it the value of '3' or 51 as the last character. Next, it does (12 % 10) + '0' turns into 2 + '0' giving it the value of '2' or 52 for the character behind it. Finally, it'll get (1 % 10) + '0' turns into 1 + '0' giving it a value of '1' or 51 for the final character.
+</p>
+
+<p> Lastly, we have str[len(n)] set the very last character to a '\0' or a null pointer to finish off the string, which is now '123\0' then returning the character array </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/itoa3.png" alt=""> </img>
+					<img src="./imgs/libft/itoa1.png" alt=""> </img>	
+				</div>
+				
+				<div id="lstadd">
+<h2> lstadd </h2>
+<p>This function is used to add an item to a linked list in C. First we pass a pointer to an array of t_list. t_list is a struct defined in the header file libft.h. We then pass a pointer to another struct called new. </p>
+<p> First we error handle by making sure new is not null when passed. Next, we then set new to the next iteam in the passed list alast. Then we also equal to the new list with the added information. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/lstadd.png" alt=""> </img>
+				</div>
+				
+				<div id="lstdel">
+<h2> lstdel </h2>
+<p> This function first takes on 2 parameters. First a pointer to an array list of t_list. Second, a pointer to the location of data within the struct along with the size of the data. It then initializes a pointer to a struct called current, then next. After current is set to the pointer of the array list of structs passed in the parameters. Next it loops through the array list of structs. First, it sets the next array list to the location of the current structs next data parameter. Then it calls the del void function passed in the parameter with the current structs content data parameter, then along with the current structs content_size parameter. Then it calls the free function on the current struct. After it sets the current struct equal to next. It does this for the entire linked list. Then, it selects the final list to 0 to return an empty or deleted array list of structs. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/lstdel.png" alt=""> </img>
+				</div>
+				
+				<div id="lstdelone">
+<h2> lstdelone </h2>
+<p> This function is used to delete a single struct in a linked list. If first checks to see if the linked list passed is null or if the struct it is referencing is null or if the void del function passed is null. If any of those are null, it returns stopping the function. After it calls the passed del function with the linked list struct content as well as content size as parameters, It then calls free to delete the allocated memory behind the struct's memory allocation within the linked list.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/lstdelone.png" alt=""> </img>
+				</div>
+				
+				<div id="lstiter">
+<h2> lstiter</h2>
+<p> This function performs a void function f passed on each struct within the linked list from the initial struct passed in the first parameter. The function loops while no elements are null. It then executes the function on the element. It then sets the struct pointer equal to the next data in the struct, which is a pointer to the next element in the linked list. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/lstiter.png" alt=""> </img>
+				</div>
+				
+				<!-- <div>
+					<h2> lstmap </h2>
+					<p> </p>
+				</div>
+
+				<div>
+					<img src="./imgs/libft/lstmap.png" alt=""> </img>
+				</div> -->
+				
+				<div id="lstnew">
+<h2> lstnew </h2>
+<p> This function is used to add a new element to a linked list. First it takes the pointer to the data it wants to add. Next it takes the size of the data it is going to add. It then initializes a struct called newlist. Next it initializes a pointer called stuff. It then sets the pointer of stuff to the content passed in the parameter above. Next, it allocates memory for a new element to be added with the type casting of a pointer to an element along with it multiplied by the content size. After it error handles to make sure the newlist is not null. If it is, it returns 0 while exiting the function. Then, it sets the newlist content data to a memalloc block of allocated memory with the size passed to it. It then checks to see if the new content was null. If so, it sets the data in the newlist struct data content to 0 as well as the current size to 0. Otherwise, it sets the newlist->conent to a copy of what was passed in the parameter as void const *content. After it updates the content size to the content_size passed a parameter. After, it sets the next value in the struct to 0 which puts an end to the link list. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/lstnew.png" alt=""> </img>
+				</div>
+				
+				<div id="memalloc">
+<h2> memalloc </h2>
+<p> This function returns a pointer to a malloced size of memory. It takes a size to know how much to malloc for. It then initializes a pointer of data called block. The block is then allocated the amount of memory passed in by size. It then does error handling to make sure the block didn't return null. Then, the ft_bzero function is called with a reference in memory to the pointer of block along with the parameter size. This sets the memory of each spot in the data to 0. </p>
+				</div>
+
+				<div>
+					<img src="./imgs/libft/memalloc.png" alt=""> </img>
 				</div>
 			</div>
 				

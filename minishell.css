@@ -56,7 +56,7 @@ nav li:hover {
 main{
 	maring: 0 auto;
 	position: relative;
-	top: 80px;
+/*	top: 80px;*/
 	text-align: center;
 }
 
@@ -72,6 +72,8 @@ main{
 		row-gap: 65px;
 	}
 	
+	
+	
 }
 
 @media screen and (min-width: 500px) {
@@ -85,10 +87,17 @@ main{
 	}
 }
 
+a {
+	padding-left: 8px;
+	padding-right: px;
+}
+
 div {
+	padding-top: 50px;
 	padding-left: 3%;
 	padding-right: 3%;
 	line-height: 1.7;
+	align-content: center;
 }
 
 img {
