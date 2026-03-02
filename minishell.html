@@ -21,10 +21,82 @@
 		</nav>
 		
 		<main>
-			<div style="height: 1000px">
-				<h2> Comming soon! </h2>
+			<div>
+				<h2> Minishell </h2>
+				<h2> Before we get to minishell let's break down the library that we'll be implementing </h>
+				<h2> This library is called libft </h2>
 			</div>
-			
+				<br> <br> <br>
+				<div class="container">
+				<div>
+					<p> At the top of the file we are declaring variables that can be called from later in the make file. NAME is the file it is going to produce, in this case, libft.a. INCLUDES targets the includes folders which are the location of the .h or header files for the C code. FLAGS is setting gcc compiler flags that check for extra things outside a normal gcc file_name compilation. CC is the compiler options in this case, it is gcc. OBJ are the object files that come from compiling the c files with gcc. 
+					</p>
+
+					<p> Next up we have functionality that is passed to the make file. When running the make file using 'make' in the terminal where the file is we start with compiling all the .c files. It does this by using the % as a wild card to call all the .c files that have the same name as the .o files listed. Then it runs the $(CC) which is GCC, $(FLAGS) which is -Wall -Wextra -Werror, then $(INCLUDES) which is -I ./includes. -c is telling the compiler to not link any of the files it's compiling. 
+					</p>
+				
+					<p>
+					The next call is used to create the library file or .a file. It uses ar rc to put all the objects into the libft.a file then uses ranlib to actually create a useful library file.
+					</p>
+
+					<p>
+					The clean: function is called when running make clean in the terminal. @/bin/rm -f uses the bin/bash command rm than the -f flag is to indicate it is a file it is deleting, not a repo. Then it cleans all files listed in the OBJ variable. fclean: does the same thing except it also removes the .a file or library file that was compiled with it as well. Running the re: command essentially calls fclean to clear out the object files as well as the .a file created, then calls all: to recompile the program from the top down.
+					</p>
+				
+					<p>
+					The .phony is used in case someone tries to pass functions calls as parameters to the make file. It'll make it so that way it is ignored or not picked up.
+					</p>
+
+					<p>
+					At the end of this, we end up getting a libft.a file that we can use in other make file configurations to access the library of functions we have without having to have all the .c files together in a single place.
+					</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libftMakeFile.png" alt=""> </img>
+				</div>
+				
+				<div>
+					<h2> ATOI </h2>
+					
+	<p> Here we have the ft_atoi function. This function takes in an array of characters then converts them to a integer. The parameter is an array of characters defined by the *str called str. Two variables, a long called result as well as an integer called sign, are declared on top. They are then initialized to 0 than 1 before starting the first while loop. </p>
+	<p> The first while loop here iterates through the array of characters str. Using the pointer symbol here, it is checking for blank space ' ' or any of the character codes between 8 or 13 in the ascii table decimal format. Most of these are newlines, tabs or other spaces that are parsed out of a string before getting to the number characters that are also utilized by the actual atio function in the c string lib. </p>
+
+	<p>
+	After that, it checks for a - or + character in the array to see if it is a positive or negative number. If no a - or + character is present, it assumes it is positive, leaving the integer sign to 1. If there is a — character, it changes the sign to -1 to make sure it returns a negative number once converted. It then iterates up through the array charters to start checking numbers. </p>
+
+	<p>
+	The final while loop runs as long as the pointer in the string it is referring to is within the '0' or '9' character set as well as it not being null or '/0'. It then converts the value with a base 10 conversion using Ascii table values. It sets the first character — '0', which holds a ascii table value of 48. The character 1 holds an ascii value of 49. For instance, we have the character array '19' it is essentially taking 0 * 10 + 49 - 48 to get 1. Then it takes 1 * 10 + 57 - 48 to get the number 19 which is stored in the long result.
+	</p>	
+					
+<p>
+The final return value is multiplied by the sign to return the final value that is parsed from the string passed as the parameter *str.
+</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/atoi.png" alt=""> </img>
+				</div>
+				
+				<div>
+<h2> bzero </h2>
+<p> Here we take in 2 parameters. A void variable called *s which is a pointer to the location in memory a particular variable is stored at, then a size_t called n. size_t is an unsigned integer representing the length of an array. We then use the ft_memset function that we shall cover later. It is essentially setting the memory of the pointed s to zero. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/bzero.png" alt=""> </img>
+				</div>
+				
+				<div>
+<h2> isalnum </h2>
+<p> This function takes in an integer c then states if it is an ascii value that would represent a character of 0 - 9, a - z, or A - Z. it returns 1 if it does, otherwise, it returns 0 </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/isalnum.png" alt=""> </img>
+				</div>
+			</div>
+				
 		</main>
 		
 	</body>
