@@ -40,6 +40,13 @@
 				<a href="#lstiter">lstiter</a>
 				<a href="#lstnew">lstnew</a>
 				<a href="#memalloc">memalloc</a>
+				<a href="#memccpy">memccpy</a>
+				<a href="#memchr">memchr</a>
+				<a href="#memcmp">memcmp</a>
+				<a href="#memcpy">memcpy</a>
+				<a href="#memdel">memdel</a>
+				<a href="#memmove">memmove</a>
+				<a href="#memset">memset</a>
 			</div>
 			
 			</div>
@@ -221,6 +228,69 @@ Next, we do some error handling in case we get a null return, we exit the functi
 
 				<div>
 					<img src="./imgs/libft/memalloc.png" alt=""> </img>
+				</div>
+				
+				<div id="memccpy">
+<h2> memccpy </h2>
+<p>First we take in 3 different parameters here. A pointer called dst, another const pointer called src, an integer c, than a size_t n. We then start looping with n being implemented back 1 value. This loop functions while n is not equal to 0. Next, we typecast an unsigned char pointer to the src pointer. An unsigned char is essentially a number that can not be less than 0, it has to remain positive. We then set the pointer equal to the src pointer passed in the parameters. If at any point the src pointer is equal to the int c we passed, we return the dst pointer while stopping execution of the while loop. Otherwise, if n runs out or hits 0, we then return 0 from the function. </p>
+				</div>
+				
+				<div id="memchr">
+					<img src="./imgs/libft/memccpy.png" alt=""> </img>
+				</div>
+				
+				<div>
+<h2> memchr </h2>
+<p> We take in 3 parameters: one a const pointer named s, an integer named c, then a size_t named n. After we start an iteration through the size_t n. After we typecast an unsigned char pointer to the pointer that was passed as s then check if it is equal to the integer c that was passed. If it is, it returns the pointer. Otherwise, it increments the pointer passed using s++ to check the next value. If n runs to 0 then the while loop stops with the function returning 0.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/memchr.png" alt=""> </img>
+				</div>
+				
+				<div id="memcmp">
+<h2> memcmp</h2>
+<p> This function again takes 3 parameters. Two pointers called s1, s2 than a size_t called n. If loops as long as n is not zero. While looping, it casts an unsigned char pointer to s1 as well as s2 while checking if at any point these values do not equal one another. If they do not, it returns the value of s1 subtracted from s2. Otherwise, it increments s1 than s2 than subtracts from size_t n. If n reaches zero, the while loop stops with the function returning 0.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/memcmp.png" alt=""> </img>
+				</div>
+				
+				<div id="memcpy">
+<h2> memcpy </h2>
+<p> This function takes three parameters. Two pointers dst and src rather than size_t n. We declare a new pointer called ret. We then initialize the value of ret to the dst pointer passed in the parameters. We then iterate through n. We then set the pointer dst equal to the pointer src while typecasting an unsigned char pointer to each. After we return ret which has successfully copied the values of the src pointer. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/memcpy.png" alt=""> </img>
+				</div>
+				
+				<div id="memdel">
+<h2> memdel </h2>
+<p> this function taps a pointe to an array. It then sets ap equal to 0. After, it calls the free function to unallocate the memory from the pointer passed in the parameter.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/memdel.png" alt=""> </img>
+				</div>
+				
+				<div id="memmove">
+<h2> memmove </h2>
+<p> this function takes 2 pointers along with a size_t len as parameters. It also returns a pointer. First we declare another pointer called new. We then set the value of this to the pointer dst passed in as a parameter. After we check if the dst pointer is less than the src pointer. If it is, we run a while loop while the dst subtracted new is less than the len passed in as a parameter. While this condition is met, it sets dst equal to src while typecasting an unsigned char than incrementing after with the ++ on the end. If the dst is greater than the src passed, it then runs a while loop that subtracts from len while len is greater than 0. In this loop, it sets the dst index at len equal to the src indexed at len to similar values while typecasting an unsigned char than incrementing len till it is 0. This makes sure if the dst is less than source it what it can otherwise it cops the entire length of what is passed. After these conditions, it then returns new which is the same pointer in memory as dst. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/memmove.png" alt=""> </img>
+				</div>
+				
+				<div id="memset">
+<h2> memset </h2>
+<p> This function takes three parameters: one pointer b, and integer called c, then a size_t called len. First we declare an unsigned character called x. Then we set this character equal to b. Then, we loop through len while it is above zero. We set the character equal to the integer c passed while typecasting it to an unsigned char. We also iterate x. After we return the passed pointer b as it reflects x.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/memset.png" alt=""> </img>
 				</div>
 			</div>
 				
