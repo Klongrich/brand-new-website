@@ -26,7 +26,7 @@
 				<h2> Before we get to minishell let's break down the library that we'll be implementing </h2>
 				<h2> This library is called libft </h2>
 				
-				<div>
+			<div>
 				<a href="#atoi">atoi</a>
 				<a href="#bzero">bzero</a>
 				<a href="#isalnum">isalnum</a>
@@ -47,6 +47,44 @@
 				<a href="#memdel">memdel</a>
 				<a href="#memmove">memmove</a>
 				<a href="#memset">memset</a>
+				<a href="#print_list">print_list</a>
+				<a href="#putchar">putchar</a>
+				<a href="#putchar_fd">putchar_fd</a>
+				<a href="#putendln">putendln</a>
+				<a href="#putendl_fd">putendl_fd</a>
+				<a href="#putnbr">putnbr</a>
+				<a href="#putnbr_fd">putnbr_fd</a>
+				<a href="#putstr">putstr</a>
+				<a href="#putstr_fd">putstr_fd</a>
+				<a href="#strcat">strcat</a>
+				<a href="#strchr">strchr</a>
+				<a href="#strclr">strclr</a>
+				<a href="#strcmp">strcmp</a>
+				<a href="#strcpy">strcpy</a>
+				<a href="#strdel">strdel</a>
+				<a href="#strdup">strdup</a>
+				<a href="#strequ">strequ</a>
+				<a href="#striter">striter</a>
+				<a href="#striteri">striteri</a>
+				<a href="#strjoin">strjoin</a>
+				<a href="#strlcat">strlcat</a>
+				<a href="#strlen">strlen</a>
+				<a href="#strmap">strmap</a>
+				<a href="#strmapi">strmapi</a>
+				<a href="#strncat">strncat</a>
+				<a href="#strncmp">strncmp</a>
+				<a href="#strncpy">strncpy</a>
+				<a href="#strnequ">strnequ</a>
+				<a href="#strnew">strnew</a>
+				<a href="#strnstr">strnstr</a>
+				<a href="#strnstr">strnstr</a>
+				<a href="#strrchr">strrchr</a>
+				<a href="#strsplit">strsplit</a>
+				<a href="#strstr">strstr</a>
+				<a href="#strsub">strsub</a>
+				<a href="#strtrim">strtrim</a>
+				<a href="#tolower">tolower</a>
+				<a href="#toupper">toupper</a>
 			</div>
 			
 			</div>
@@ -292,6 +330,372 @@ Next, we do some error handling in case we get a null return, we exit the functi
 				<div>
 					<img src="./imgs/libft/memset.png" alt=""> </img>
 				</div>
+				
+<div id="print_list">
+<h2> print_list </h2>
+<p> This function prints out a linked list. It takes a pointe to a struct called list. It then loops through the list while it is not null. It then prints out the content data within the struct. It then sets the list equal to the pointer to the next struct under the next variable within the struct </p>
+</div>
+				
+				<div>
+					<img src="./imgs/libft/print_list.png" alt=""> </img>
+				</div>
+				
+				<div id="putchar">
+<h2> putchar </h2>
+<p> This function prints a character to the terminal using the Unix standard library function called write. This function takes a single parameter of a character called c. It then uses the write function. The first parameter passed is the file descriptor. This tells it to either print out to standard error (2), standard out (1), or standard in (0). The next parameter is a reference in memory to where the character is stored. The final parameter is used to define how many bytes are needed to write the passed information. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/putchar.png" alt=""> </img>
+				</div>
+				
+				<div id="putchar_fd">
+<h2>putchar_fd </h2>
+<p> Similar to the putchar described above, however, there is an extra parameter passed that is an integer that allows you to choose or select a file descriptor. Allowing you to print from stdout, stdin, or stderror. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/putchar_fd.png" alt=""> </img>
+				</div>
+				
+				<div id="putendln">
+<h2> putendln </h2>
+<p> This function takes a character constant pointer called s. This function then prints the character array or pointe to standard out. It uses a ft_strlen() function to get the length of the array in s. It then calls the ft_putchar function to print out a new line to stdout after the character array above has been printed. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/putendln.png" alt=""> </img>
+				</div>
+				
+				<div id="putendl_fd">
+<h2> putendl_fd </h2>
+<p> This is the same as putendln as described above, however with an extra parameter allowing you to select the file descriptor to print to either stdout, stdin, or stderror.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/putendl_fd.png" alt=""> </img>
+				</div>
+				
+				<div id="putnbr">
+<h2> putnbr </h2>
+<p> This function prints out a number to stdout. First it takes in an integer called n. It then declares a long called num. After it sets num equal to n by typecasting a long to the integer. After that, it checks if num is less than zero. If it is a character '-' is printed, then the number is multiplied by -1 to turn it positive. Next, it checks if num is greater than 9. If it is, this function then uses recursion by calling itself again with the parameter n being passed as num / 10. It does this until the number passed is less than 9. This is what is called the base case for this function that uses recursion. For instance, we pass it the number 123. The first time through it than passes the number 123 / 10 to the function ft_putnbr. It runs this function again from the top, then passes 12 / 10 to the ft_putnbr function. On this call the num is equal to 1 making it less than, not greater than 9. This then calls the ft_putchar function with (1 % 10) + 48 t0 get ft_putchar (49) which is 1 without calling ft_putnbr again. This completes the function called that was ft_putnbr(12 / 10) meaning it then goes to ft_putchar(12 % 10) + 48. Then it goes back through the function to get (123 % 10) + 48 which is 3 + 48 then 51. This in return ends up printing out 123 to stdout. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/putnbr.png" alt=""> </img>
+				</div>
+				
+				<div id="putnbr_fd">
+<h2> putnbr_fd </h2>
+<p> This function works the same as the description above expect it takes an extra parameter, that is an integer called fd. This allows you to select the file descriptor the number is printed to.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/putnbr_fd.png" alt=""> </img>
+				</div>
+				
+				<div id="putstr">
+<h2> putstr </h2>
+<p> This function takes a const character pointer called s as a parameter. It then calls the write function from the unix standard library with 1 in the file descriptor parameter, the variable passed for what to print. Then to get the amount of bytes needed, the ft_strlen counts the number of characters in the pointer or array. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/putstr.png" alt=""> </img>
+				</div>
+				
+				<div>
+<h2 id="putstr_fd"> putstr_fd </h2>
+<p> This function is the same as described above, however it takes an extra parameter fd that lets your select the file description. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/putstr_fd.png" alt=""> </img>
+				</div>
+				
+				<div id="strcat">
+					<h2> strcat </h2>
+					<p> This functions returns a character array. It had 2 parameters a character array s1 then a const character array s2. Next we declare two integers. One integer is i, the next is count. We then intialzie i to 0 than count to the length of the paramter passed as s2. Next we start a while loop that increments i to the ned of the first character array or pointer. Than we start another while loop the iterativly subtracts from the count variable until it is equl to 0. In this look the characer array s1 is set equal to the valuei n s2 while incrementing both of them. Then the final line sets the last positon fo the s1 character array to '\0' or a null pointer to signal the end of the array. Afte it returns s1 which is an concatainted array of s1 plus s2. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strcat.png" alt=""> </img>
+				</div>
+				
+				<div id="strchr">
+<h2> strchr </h2>
+<p> This function returns a character array. It first takes two parameters. A constant character array s than an integer c. It then starts an infinite running loop. Then, it checks if the character is equal to the integer passed in the parameter. If it is, we typecast a character array to s, then return it stopping to the loop or function. If not, checks to see if the character is equal to null. If it is, the function returns a 0. It also iterates up on the constant character array. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strchr.png" alt=""> </img>
+				</div>
+				
+				<div id="strclr">
+<h2> strclr </h2>
+<p> This function is a void function, meaning it does not return a value. The function takes a character array s as its parameter. Next, it checks to see if the value passed was null. If it is null, the function returns, meaning it cuts out of the function. If the value passed is not null, it then runs a while loop on the character array. It sets each value in to a null pointer or '\0' to clear the pointer values. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strclr.png" alt=""> </img>
+				</div>
+				
+				<div id="strcmp">
+<h2> strcmp </h2>
+<p> This function returns an integer that takes 2 parameters. Both parameters are constant character pointers called s1 then s2. Next we loop through the s1 pointer as long as it is not equal to null. Then we use an if statement to check if the character s1 is not equal to s2 while typecasting an unsigned character pointer. This makes it so that values can not be negative while using an unsigned character. If the values are not equal, the function returns the value of s1 subtracted from s2. If they are equal, we iterate s1 as well as s2. If the function iterates entirely through s1 the while loop stops, then the value of s1 subtracted from s2 is then returned in the function. This function is used to compare character arrays. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strcmp.png" alt=""> </img>
+				</div>
+				
+				<div id="strcpy">
+<h2> strcpy </h2>
+<p> This function returns a character array while taking in 2 parameters. One parameter is dst, the next is a constant character pointer called src. We first declare the character array dup. Next we set dup equal to the value of dst passed in the parameter. When then loop through src while it is not equal to null. We set each value of dst to src while iterating through both. After we end the dst array with a null pointer or '\0'. When then return the character array dup as is it equal to the pointer value of dst. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strcpy.png" alt=""> </img>
+				</div>
+				
+				<div id="strdel">
+<h2> strdel </h2>
+<p> This is a void function, meaning it does not return any values. It takes a pointer to a pointer character value as it's one parameter. If the value is null, the function returns, stopping it there. Otherwise, it sets the pointe value to 0 then frees the allocation of memory associated with the value passed in the parameter. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strdel.png" alt=""> </img>
+				</div>
+				
+				<div id="strdup">
+<h2> strdup </h2>
+<p> This function returns a character array with one parameter as a constant character value called s1. We first declare a character pointer called dup. We then typecast a character pointer to malloc then set it to the size of the array by getting the length of the data from ft-strlen. We then add one to the end of this to make room for the null pointer. After, we error handle making sure that dup is not null before proceeding. We then call our ft_strcyp function with dup and s1 as parameters. After this we return the dup variable.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strdup.png" alt=""> </img>
+				</div>
+				
+				<div id="strequ">
+<h2> strequ </h2>
+<p> This function returns an integer. It takes two parameters: a constant character pointer s1, then a constant character pointer s2. First the function checks if s1 or s2 is null. If so, the function returns 0, then stops. Otherwise, the function continues looping through s1 until it is null. If a value of s1 does not equal s2, the function returns 0 rather than quits. Otherwise, it continues to iterate to the next character until s1 is null. After it checks the final character of s1 to s2 if they are not equal, it returns a 0. Otherwise, the function returns a 1 indicating that the values passed are equal. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strequ.png" alt=""> </img>
+				</div>
+				
+				<div id="striter">
+<h2> striter </h2>
+<p> This is a void function that does not return anything. It takes in two parameters. The first one is a character pointer called s, another is a void function pointer that takes a character pointer as a parameter called f. First, it checks to make sure that both parameters passed s or f are not null. If not, it then iterates through the s pointer while executing the function f on each value until the s pointer is null. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/striter.png" alt=""> </img>
+				</div>
+				
+				<div id="striteri">
+<h2> striteri </h2>
+<p> This function works the same as described above. Except the pointer to the function f takes a second parameter of an unsigned integer. This then declares an unsigned integer called x. Then, it initializes the value of x to zero. It then makes sure neither the values of s or f are null. Then it proceeds to the while loop while the value of the spot in s, dictated by the value of x, is not equal to null. It then loops through calling the function f with the value of x passed as the unsigned integer while a reference in memory to the value in s at the specific location determined by x is passed as the character pointer. It loops through until s returns a null value. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/striteri.png" alt=""> </img>
+				</div>
+				
+				<div id="strjoin">
+<h2> strjoin </h2>
+<p> This function returns a pointer to a character. This function takes two parameters. First we start by declaring two variables. First, a character pointer called str, then an integer called i. Next we check if s1 or s2 is null. If either of them are, we return 0. We then initialize i to 0, then initialize str using malloc to allocate the size of s1 plus s2 along with a plus one for the null pointer to add at the end. Next, we error handle checking if str is null or not. If it is, it returns 0, then the function stops. Next, it loops through s1, setting the indexed value of str to the same value of s1. Next, it does the same thing with a while loop on s2, setting the indexed values of str to the values of s2. Afterward, it adds a '\0' to the end of the string. It then returns str giving the return value of s1 as well as s2 joined together. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strjoin.png" alt=""> </img>
+				</div>
+				
+				<div id="strlcat">
+<h2> strlcat </h2>
+<p> This function returns a size_t which is an unsigned integer. It takes three parameters: a character pointer dst a constant character src then a size_t size. We first declare four different variables: a character pointer d, another character pointer s, then a size_t n, finally a size_t dlen. We then initialize d to dst while typecasting a character pointer. Then we set s equal to src while typecasting a pointer. We then set n equal to the size parameter passed in the above function.</p>
+					
+<p> we then loop through n while n and d are not null. The variable n is subtracted from while incrementing forward on the character pointer d. dlen is then initialized to the character pointer d subtracted from dst passed in the parameter. n is then set equal to the size subtracted from dlen. We then check to see if n is null. If n is null, we return dlen added to the length of the character pointer. Otherwise, we run a loop on the character pointer s. If n is not equal to one, we set the value of d to s while incrementing d. After we subtract from n. Then, we increment s until s is null. We then add a null pointer '\0' to d. After we return, dlen is added to the value of s subtracted by src. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strlcat.png" alt=""> </img>
+				</div>
+				
+				<div id="strlen">
+<h2> strlen </h2>
+<p> This function returns a size_t which is an unsigned integer. It takes one parameter, which is a character pointer called str. We first declare a size_t count. We then initialize count to the value of 0. After we loop through the str pointe while adding count each time. The loop runs until a null pointer is reached. After it returns the count which is the total length of the string. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strlen.png" alt=""> </img>
+				</div>
+				
+				<div id="strmap">
+<h2> strmap </h2>
+<p> This function returns a character pointer. It takes two parameters; one that is a const character pointer called s. another that is a pointer to a function that returns a character that also takes a character as a parameter. We first declare two variables, one character array called str than another integer called i. We then initialize the value of i to 0. Next we check if s or f is null. If either of them are null, we return a 0 from the function. Then, we initialize str to equal a newly allocated block of memory called from malloc, which is the size of the length of s plus one. We then error handle to make sure that str is not equal to null. Then, we run a loop on the s array using i as an incrementer. In this array we set the value of str at i to the result of the function ran on the character at i on the s array. We then iterate I by one. After that, the end of the string is set to '\0' which is a null pointer. After this, we then return the str character array. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strmap.png" alt=""> </img>
+				</div>
+				
+				<div id="strmapi">
+<h2> strmapi </h2>
+<p>This function is the same as described above however the pointer to the function f has an extra parameter of an unsigned integer that is passed while looping through the s array. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strmapi.png" alt=""> </img>
+				</div>
+				
+				<div id="strncat">
+<h2> strncat </h2>
+<p> This function concatenates two strings with the second string being copied as long as the n is passed. It returns a character array while taking three parameters. s1 which is a character array, then s3, which is a const character array, then a size_t called n. First we declare a character array variable called dup. Next, we initialize dup to s1. Next we iterate over s1 while it is not a null pointer. Next we run a loop while n is not equal to null and s2 is not equal to a null pointer. If either of these conditions are met, the loop shall exit. In the loop, we set s1 equal to s2 while iterating through both. Finally, we add a null pointer to s1 at the end. We then return the dup character pointer as it is pointing to the same value as s1. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strncat.png" alt=""> </img>
+				</div>
+				
+				<div id="strncmp">
+<h2> strncmp </h2>
+<p> This function returns an integer. It takes three parameters. The first parameter is a constant character pointer s1. The second is a constant character pointer s2. The third is a size_t called n. We start the function by running a while loop while n is not equal to 0. The loop subtracts 1 from end every cycle using the -- on the end of it. The first if statement checks if the character pointer s1 is not equal to s2 while castyping an unsigned character pointer to each. If they are not equal, the function returns the value of s1 subtracted from s2. It then moves on to check if s1 and s2 are null. If so, it calls the break function which ends the loop. If neither of those conditions are met. It then iterates the s1 as well as the s2 character pointers. This is a way to compare strings or character arrays up to a certain length that is established by the size_t n parameter that is passed into the function. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strncmp.png" alt=""> </img>
+				</div>
+				
+				<div id="strncpy">
+<h2> strncpy </h2>
+<p> This function returns a character array. It has three different parameters. The first parameter is a character pointer called dst. The second one is a constant character pointer called src. The third one is a size_t called len. First we declare a character pointer called dup. Next we declare a size_t called start. We then initialize dup to dst, then start to len. If len is null, then the function returns the dup string. If it isn't null, it moves to the while loop. This loop function while src is not a null pointer and the len is not 0. It then sets dst equal to src while incrementing both. After it checks if len is greater than the start. If it is we call the ft_bzero function using dst as well as len as parameters. After this, we then return dup as the copied string. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strncpy.png" alt=""> </img>
+				</div>
+				
+				<div id="strnequ">
+<h2> strnequ </h2>
+<p> This function returns an integer. It takes three parameters. The first one is a const character pointer called s1. The next is a constant character pointer called s2. The third one is a size_t called n. Next it checks to see if s1 or s2 is null. If one or either of them are null the function returns 0. If not, it moves to the while loop, which executes while *s1 is not null and n is not equal to 0. if *s1 does not equal *s2 the function returns 0. Then the loop increments s1 as well as s2. Once either s1 is null or n is equal to 0 the loop stops than returns 1 meaning the character arrays passed are a equal from the length specified on the size_t n parameter.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strnequ.png" alt=""> </img>
+				</div>
+				
+				<div id="strnew">
+<h2> strnew </h2>
+<p> This function returns a character array. It takes one parameter, which is size_t size. First we declare our variables. The first variable we declare is a character pointer called str. Next we declare an integer called i. We then initialize i to zero. Then, we initialize str by typecasting a character pointer to malloc that is the size of the size passed in as a parameter. Next we error handle to see if str is null. If it is, we return 0 from the function. Otherwise, we continue to loop through str. We set each value of str to a '\0' which is a null pointer. After we return str which is the new string we created. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strnew.png" alt=""> </img>
+				</div>
+				
+				<div id="strnstr">
+<h2> strnstr </h2>
+<p> This function returns a character pointer. This function takes three parameters. A constant character pointer called big. Then a constant character pointer called little. After that, it takes a size_t called len. Next we declare three variables. First we declare a constant character pointer called x1 then another called x2. Finally, we declare a size_t called n. Next we check to see if *little is null. If so we return the constant character pointer big while typecasting a character pointer to it. If not we enter into a while loop while big is not null and len is not equal to 0. We check to see if big is equal to little. If it is, we then set the value of n equal to len. The value of x1 equals big plus one, then the value of x2 equal to little plus one. Next we end a while loop with the conditions of x1 equal to x2 and x1 is not null as well as x2 not being null. Then finally, while n is not equal to 0. While these conditions are met, we increment x1 as well as x2 by one. After the while loop is done, we check to see if *x2 is null or not. If it is null, we return the constant character pointer big while typecasting a normal character pointer to it. After we increment the big character array. This function allows us to see if a string or character array is within another within a predefined length set by len. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strnstr.png" alt=""> </img>
+				</div>
+				
+				<div id="strrchr">
+<h2> strrchr </h2>
+<p> This function returns a character pointer. It takes two parameters: one constant character called s and another integer called c. We then declare a variable that is a character array called last. Next, we set last equal to 0. Afterward, we check to see if *s is equal to null or not. If it is the function, then returns 0. Next we run an infinite while loop. We first check to see if *s has a character equal to c. If it does, we set last equal to that character while typecasting a normal character array. Then, we increment s while checking if it is a null pointer. If it is, we then return the value of last this ending the loop. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strrchr.png" alt=""> </img>
+				</div>
+				
+				<div id="strsplit">
+<h2> strsplit </h2>
+<p> This function returns a multidimensional character array. This function takes a const character array called s then a character called c as parameters. Next we declare three variables. One const character is a multidimensional array called array. The next two integers, one called x then another called count. We first check to see if s is null. If s is null, we then return the value of 0. Next, call the function wordcount with parameters s as well as c </p>
+
+<p> This function wordcount returns a static integer. This function also takes two parameters: one constant character array called s, another character called c. We declare an integer called count, then initialize it to 0. After we loop through the s parameter while it is not null. Next we loop through s while it is equal to c. We then increment s while this condition is true. Afterward, we check to see if s is null. If it is, we call the break function that stops the while loop. If we don't, we increment the count, then enter into another whole loop. We check to see i the character in s is not equal to c and is also not a null pointer, then we increment s. After we return the count variable from the function.</p>
+					
+<p>Next, we initialize an array to the value of a constant character multidimensional array typecasted to a malloc that is the size of a const character array with the length of the count we got plus one. After, we initialize x to the value of 0. We then do error handling to check if the array is null. If it is null, we then return 0 from the function. If not, we continue to loop with the s pointer. Next we loop through the s array while it is equal to c. Then we check if s is equal to a null pointer character. If it is, we then break. After that, we set the array index value of x equal to the a constant character array typecasted on the return value of the createword function. We pass two parameters in the create word function. One being a reference in memory to the s pointer, another being the value of character c. </p>
+
+<p> The create word function returns a static character pointer. It takes a constat character pointer called str along with a character called c. We first declare two variables. A character pointer called temp, then an integer called i. We initialize i to the value of 0. We then set temp equal to a typecasted character pointer value of a malloc that is the size of a character value, which is the length of the value returned from lettercount with str as well as c passed as parameters than plus one </p>
+					
+<p> The letter count function returns a static integer. It takes two parameters, one being a constant character pointer called str, then a character c called. We declare an integer called i. We initialize i to the value of 0. Next we loop through the value of s using i as an index to call values from s. While the indexed value is not equal to the passed c character and the value is also not null, we iterate i. After we return the value i. </p>
+
+<p> Now back in our createword function, we finish initializing temp. Then, we check to make sure temp is not equal to null. If it is, we return a 0 from the function. After we run a while loop on str calling the values indexed at i. while the str value does not equal the c value, as well as the str value not being null, we continue the loop. We then set the temp indexed value equal to the str indexed value while incrementing i. After the while loop is complete, we set the end of the temp array to a null pointer. We then return temp from this function. </p>
+					
+<p> After this, we loop through s while it is not null and while the value of s is not equal to the c character. We increment s while these conditions are true. Then, we check if count is equal to 1. If it is, we then break the loop. Finally, we set the last value of the array variable to 0. After, we typecast a multidimensional array to the value of array as we return it. </p>
+					
+					
+					<p> </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strsplit3.png" alt=""> </img>
+					<img src="./imgs/libft/strsplit2.png" alt=""> </img>
+					<img src="./imgs/libft/strsplit1.png" alt=""> </img>
+				</div>
+				
+				<div id="strstr">
+<h2> strstr </h2>
+<p> This function is the same as<a href="#strnstr">strnstr</a> except in the second while loop it does not have the value n as a condition for incrementing.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strstr.png" alt=""> </img>
+				</div>
+				
+				<div id="strsub">
+<h2> strsub </h2>
+<p> This function returns a character pointer. It has three parameters. The first one is a constant character pointer called s. The next is an unsigned integer called start. Finally, we have a size_t called len. We first declare two separate variables. One character array called str then another integer called i. We then check if s is null. If it is we return 0 then stop the function. Otherwise, we continue to initialize i to 0 then initialize str to a newly allocated character pointer data type that is the size of the len passed as the parameter plus one. We then check if str is null. If it is null, then we return 0. Next we increment through the while loop while subtracting from start. We in the loop we increment x until the condition is meet to exit. Then we do another while loop subtracting from len while it is not equal to 0. In the while loop we set the indexed value of str to the value of s while incrementing both. After this, we set the end of the string to a '\0' then return the str. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strsub.png" alt=""> </img>
+				</div>
+				
+				<div id="strtrim">
+<h2> strtrim </h2>
+<p> This function returns a character pointer. It takes one parameter, which is a constant character array called s. We first declare our variables. One is a constant character array str another is an integer called i. We first do error handling to make sure the value passed into the construct is not null, in this case. If it is we return 0 which stops the function. Next, we initialize i to equal 0, then initialize str to freshly allocated memory that is the length of the parameter s that was passed plus one. Next we do more error handling to make sure str is not equal to null. If it is, we return 0, stopping the function. Next we run a loop while the pointer's is equal to a ' ' or '\n' or '\t'. \n is a new line, \t is a tab, ' ' is simply a space. While these conditions are true, we increment through s. Next, we run a while loop while s is not equal to null. We then run an if function on the return value of the flags function, which returns a static integer. If the value returned is one, the loop breaks, if the value returned is 0, we move to the next line.  </p>
+
+<p> The flags function returns a static integer. It takes on a parameter which is a constant character called s. We then loop through s while it is equal to ' ' , '\n', or '\t'. If it is we increment s. If s is equal to null, we return 1. Otherwise, we continue through the loop then return 0.</p>
+
+<p> If the flags function returns 0, we then increment the indexed value of str as well as the value of s while setting the indexed value of str to the value of s. After this, we add a null pointer to the end of str before returning it as a variable.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/strtrim.png" alt=""> </img>
+				</div>
+				
+				<div id="tolower">
+<h2> tolower </h2>
+<p> This function returns an integer. It takes one parameter, which is an integer called c. It then checks if the value of c is between the ascii table values of 'A' to 'Z'. If it is we add 32 to the value of c, then return it. This returns the lowercase value of the integer passed.</p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/tolower.png" alt=""> </img>
+				</div>
+				
+				<div id="toupper">
+<h2> toupper </h2>
+<p> This function returns an integer. It takes one parameter, which is an integer called c. We first check to see if the value of the integer is between the ascii values of 'a' to 'z'. If it is, we subtract 32 from this value, then return it. This returns an uppercase value of the same letter. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/libft/toupper.png" alt=""> </img>
+				</div>
+				
+				<div>
+					<h2> </h2>
+					<p> </p>
+				</div>
+				
+				<div>
+					<img src="" alt=""> </img>
+				</div>
+				
 			</div>
 				
 		</main>
