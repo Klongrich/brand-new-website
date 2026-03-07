@@ -41,6 +41,39 @@ nav ul {
 	}
 }
 
+.flex-box {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.flex-box-xy {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.flex-box-xy img {
+	height: auto;
+	width: 150px;
+	margin-top: 10px;
+}
+
+
+
+.tetrimino_format_example{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 button {
 	background-color: rgb(72, 72, 72);
 	padding: 8px 75px;
@@ -99,35 +132,6 @@ main{
 	}
 }
 
-.flex-box {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: wrap;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.functionLinks{
-	text-align: left;
-	margin-top: 10px;
-}
-
-.functionLinks a {
-	padding-left: 8px;
-	padding-right: 8px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	color: darkgrey;
-	text-decoration: none;
-	background-color: rgb(90, 90, 90);
-	border: 1px solid black;
-}
-
-.functionLinks a:hover {
-	background-color: black;
-	cursor: pointer;
-}
 
 div {
 	padding-left: 3%;
