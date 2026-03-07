@@ -50,6 +50,11 @@ nav ul {
 	margin-bottom: 20px;
 }
 
+.flex-box img{
+	margin-top: 10px;
+	
+}
+
 .flex-box-xy {
 	display: flex;
 	justify-content: space-around;
@@ -113,11 +118,18 @@ main{
 		height: 100%;
 		grid-template: .1fr .1fr .1fr .1fr .1fr / 1fr;
 		justify-content: space-around;
-		column-gap: 65px;
 		row-gap: 65px;
 	}
 	
+	div {
+		line-height: 1.7;
+		align-content: center;
+	}
 	
+	p {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
 	
 }
 
@@ -125,19 +137,18 @@ main{
 	.container {
 		display: grid;
 		height: 100%;
-		grid-template:  .1fr .1fr .1fr .1fr .1fr .1fr .1fr/ 1fr 1fr;
+		grid-template: .1fr .1fr .1fr .1fr .1fr / 1fr 1fr;
 		justify-content: space-around;
 		column-gap: 65px;
 		row-gap: 65px;
 	}
-}
-
-
-div {
-	padding-left: 3%;
-	padding-right: 3%;
-	line-height: 1.7;
-	align-content: center;
+	
+	div {
+		padding-left: 3%;
+		padding-right: 3%;
+		line-height: 1.7;
+		align-content: center;
+	}
 }
 
 img {
