@@ -125,7 +125,7 @@ main{
 	.container {
 		display: grid;
 		height: 100%;
-		grid-template: .1fr .1fr .1fr .1fr .1fr / 1fr 1fr;
+		grid-template: repeat(30, .1fr) / 1fr 1fr;
 		justify-content: space-around;
 		column-gap: 65px;
 		row-gap: 65px;
