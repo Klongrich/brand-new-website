@@ -53,6 +53,7 @@ nav ul {
 .flex-box img{
 	margin-top: 15px;
 	margin-bottom: 15px;
+	
 }
 
 .flex-box-xy {
@@ -68,6 +69,17 @@ nav ul {
 	margin-top: 10px;
 }
 
+pre {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Scroll horizontally if needed */
+    font-size: 14px;
+}
+code {
+    font-family: Consolas, Monaco, 'Courier New', monospace;
+    color: #333;
+}
 
 
 .tetrimino_format_example{
