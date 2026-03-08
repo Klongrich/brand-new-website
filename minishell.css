@@ -99,6 +99,11 @@ main{
 	}
 }
 
+.flex-box img{
+	margin-top: 15px;	
+	margin-bottom: 15px;
+}
+
 .flex-box {
 	display: flex;
 	justify-content: space-around;
