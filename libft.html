@@ -123,18 +123,18 @@
 				<div id="atoi">
 					<h2> ATOI </h2>
 					
-	<p> Here we have the ft_atoi function. This function takes in an array of characters then converts them to a integer. The parameter is an array of characters defined by the *str called str. Two variables, a long called result as well as an integer called sign, are declared on top. They are then initialized to 0 than 1 before starting the first while loop. </p>
-	<p> The first while loop here iterates through the array of characters str. Using the pointer symbol here, it is checking for blank space ' ' or any of the character codes between 8 or 13 in the ascii table decimal format. Most of these are newlines, tabs or other spaces that are parsed out of a string before getting to the number characters that are also utilized by the actual atio function in the c string lib. </p>
+	<p> Here we have the ft_atoi function. This function takes in an array of characters then converts them to an integer. The parameter is an array of characters called str. Two variables, a long called result as well as an integer called sign, are declared on top. Result is initialized to 0 then sign is initialized to 1 before starting the first while loop. </p>
+	<p> The first while loop here iterates through the array of characters str using the pointer symbol here. It is checking for blank space ' ' or any of the character codes between 8 or 13 in the ascii table decimal format. Most of these are newlines, tabs or other spaces that are parsed out of a string before getting to the number characters that are also utilized by the actual atoi function in the c string lib. </p>
 
 	<p>
-	After that, it checks for a - or + character in the array to see if it is a positive or negative number. If no a - or + character is present, it assumes it is positive, leaving the integer sign to 1. If there is a — character, it changes the sign to -1 to make sure it returns a negative number once converted. It then iterates up through the array charters to start checking numbers. </p>
+	After that, it checks for a - or + character in the array to see if it is a positive or negative number. If there is not a - or + character present, it assumes it is positive, leaving the integer sign to 1. If there is a — character, it changes the sign to -1 to make sure it returns a negative number once converted. It then iterates up through the str array to start checking numbers. </p>
 
 	<p>
-	The final while loop runs as long as the pointer in the string it is referring to is within the '0' or '9' character set as well as it not being null or '/0'. It then converts the value with a base 10 conversion using Ascii table values. It sets the first character — '0', which holds a ascii table value of 48. The character 1 holds an ascii value of 49. For instance, we have the character array '19' it is essentially taking 0 * 10 + 49 - 48 to get 1. Then it takes 1 * 10 + 57 - 48 to get the number 19 which is stored in the long result.
+	The final while loop runs as long as the pointer in the string it is referring to is within the '0' or '9' character set as well as it not being null or '/0'. It then converts the value with a base 10 conversion using Ascii table values. It sets the first character — '0', which holds an ascii table value of 48. The character 1 holds an ascii value of 49. For instance, we have the character array '19' it is essentially taking 0 * 10 + 49 - 48 to get 1. Then it takes 1 * 10 + 57 - 48 to get the number 19 which is stored in the long result.
 	</p>	
 					
 <p>
-The final return value is multiplied by the sign to return the final value that is parsed from the string passed as the parameter *str.
+The final return value is multiplied by sign to return the final value that is parsed from the string passed as the parameter *str.
 </p>
 				</div>
 				
@@ -144,7 +144,7 @@ The final return value is multiplied by the sign to return the final value that 
 				
 				<div id="bzero">
 <h2> bzero </h2>
-<p> Here we take in 2 parameters. A void variable called *s which is a pointer to the location in memory a particular variable is stored at, then a size_t called n. size_t is an unsigned integer representing the length of an array. We then use the ft_memset function that we shall cover later. It is essentially setting the memory of the pointed s to zero. </p>
+<p> Here we take in 2 parameters. A void variable called *s which is a pointer to the location in memory a particular variable is stored at, then a size_t called n. size_t is an unsigned integer representing the length of an array. We then use the ft_memset function that we shall cover later. It is essentially setting the memory of the pointer s to zero. </p>
 				</div>
 				
 				<div>
@@ -153,7 +153,7 @@ The final return value is multiplied by the sign to return the final value that 
 				
 				<div id="isalnum">
 <h2> isalnum </h2>
-<p> This function takes in an integer c then states if it is an ascii value that would represent a character of 0 - 9, a - z, or A - Z. it returns 1 if it does, otherwise, it returns 0 </p>
+<p> This function takes in an integer c then states if it is an ascii value that would represent a character of 0 - 9, a - z, or A - Z. It returns 1 if it does, otherwise, it returns 0 </p>
 				</div>
 				
 				<div>
