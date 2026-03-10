@@ -27,6 +27,7 @@
 <!-- <p> <a href="fillit.html">Example one</a> (up to 10 tetrimions) | <a href="fillit2.html">Example Two</a> (up to 26+ tetriminos) </p>
 <p> Example one up to 10 tetriminos </p> -->
 <p> The objective of this project is to find the smallest size square or grid that a set of tetriminos can fit into.</p>
+<p> The code for this project was also done in part with ryaoi. </p>
 <p> Below are examples of a tetrimino. </p>
 				<br>
 				<div class="flex-box">
@@ -195,13 +196,16 @@
 				</div>
 				
 				<div>
+					
+<!-- switching to new extract, legacy is at extract_tetriminos1, reminder to update explaintion of differences once format for display is finalized. -->
 <h2> extract_tetriminos </h2>
 <p> This function returns a t_tetri pointer. A t_tetri is a struct that is defined in the fillit.h file or header file. We created a typedef struct called s_tetri. Within this struct we define four different data values. The first value is a character called c. The next value is an array of integers that is 4 values long called x. The next is an array of integers that is also 4 values long called y. Then the fourth value is a pointer to a struct _stetri called next that points to the next struct value in the linked list. We then give this struct the alias of t_tetri at the bottom. </p>
 
 <p> This function takes one parameter that is a pointer to a character called validated_characters_read. Next we declare five variables. One integer called amount_of_tetrimions, another integer called tetrimino_start, a character called tetrimino_character, then a t_tetri pointer called extracted_tetrimions then a t_tetri pointer called tmp. We then initialize tetramino_start to 0 then tetramino_character to 'A'. Next we call the count_tetriminos function with the character array validated_characters_read as a parameter value. </p>
-				
+				</div>
 				<div>
 					<img src="./imgs/fillit/t_tetri_struct.png">
+					<img src="./imgs/fillit/extract_tetriminos.png">
 				</div>
 				
 				<div>
@@ -265,7 +269,29 @@
 				
 				<div>
 <h2> Back to extract_tetrimninos </h2>
-<p> After we convert, then store the new xy values for each tetrimino we then move forward to calling the malloc function. We initialize the new data from the tmp struct t that is a t_teri to a value of a t_teri. This next value allocates memory for the next part of the linked list. If this function returns null, we return null from the extract_tetriminos function after. Then we move forward to setting temp equal to the next value we malloced above. Then, we increment amount_of_tetriminos back by one as we have successfully converted, then stored a tetrimino. Next we increment the tetrimino_character count by one. This moves the character from an 'A' to a 'B' so on, then so fourth. After we add 21 to tetrimino_start. We use the number 21 as it represents the character length of a tetrimino once read into the system. After we loop through all the available teterimions we then exit the loop then set the next value in the linked list to NULL to signal the end of the linked list. After we return extracted_tetriminos. </p>
+<p> After we convert, then store the new xy values for each tetrimino we then move forward to calling the malloc function. We initialize the new data from the tmp struct t that is a t_teri to a value of a t_teri. This next value allocates memory for the next part of the linked list. If this function returns null, we return null from the extract_tetriminos function after. Next we call the place_tetri_to_top_left function with a reference in memory to the tmp variable passed as a parameter. 
+	
+<p> *Note : This place_tetri_to_top_left function is a deviation of the original code. We use the code from the xy_tetri function however, we have moved it from being called several times in the back tracking algorithm solver to being called once on each tetromino during the data extraction phase of the program. This eliminates redundant calls as we are no longer doing it for potentially millions of times instead, we run it once. </p>
+		 </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/fillit/extract_tetriminos.png" alt=""> </img>
+				</div>
+				
+				<!-- Note this is a moved or added function to the orignial code base to increace algothrim optmiziation. Shall think of a good way to display this information. -->
+				<div>
+						<h2> place_tetri_to_top_left </h2>
+						<p> This function is used to place the tetrimino into it's top left spot from where it was parsed. First we declare the function, which is a void function. Next we pass three parameters. One pointer to a pointer of a t_tetri called tetri. Next, an integer called x than an integer called y. After that we declare three integers. We call these integers pos_x, pos_y, then i. After we initialized these integers. We set i equal to 0, pos_x equal to 100, then pos_y equal to 100. After this, we start a while loop with the condition of i being less than 4. After that, we then check the if the value of the indexed position of the x array stored in the teteri struct is less than the pos_x. If it is we set pos_x to that value. Next we check if the value of the indexed position of the y array stored in the tetri struct is less than pos_y. If it is, we then set pos_y to that value. After that, we increment i. Once that is finished, we subtract 1 from i then begin a loop. We use this while loop with the condition of i is greater than or equal to 0. We update the tetri struct data integer array of x at the i index to the value of this value subtracted from the pos_x added to the value of x passed in the parameter. This ensures that we move the x value to the top left while maintaining the spot we are checking on the board. Next we update the tetri struct data integer array of y at the i index to the value of this value subtracted by pos_y added to y. </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/fillit/place_tetri_to_top_left.png" alt=""> </img>
+				</div>
+				
+				<div>
+					<h2> back to extract_tetriminos </h2>
+					<p> After setting the values of the tetriminos to the top left. We then move forward to setting temp equal to the next value we malloced above. Then, we increment amount_of_tetriminos back by one as we have successfully converted, then stored a tetrimino. Next we increment the tetrimino_character count by one. This moves the character from an 'A' to a 'B' so on, then so fourth. After we add 21 to tetrimino_start. We use the number 21 as it represents the character length of a tetrimino once read into the system. After we loop through all the available teterimions we then exit the loop then set the next value in the linked list to NULL to signal the end of the linked list. After we return extracted_tetriminos. </p>
 				</div>
 				
 				<div>
@@ -283,11 +309,31 @@
 				
 				<div>
 <h2> solve </h2>
-<p> This function is a void function, meaning it does not return anything. It takes one parameter, which is a t_tetri pointer called tetri. Next we declare three variables. Two multidimensional character arrays. One called result, another called tetri_map. Then we declare an integer called size. After we initialize the size to two, then tetri_map to NULL. After we set tetri_map equal to the return value of tetri_map_new with the tetri_map and size as parameters. Note here we could optimize size depending on the number of tetri we have passed to generate the smallest possible board size. However, we shall save this for a different time. </p>
+<p> This function is a void function, meaning it does not return anything. It takes one parameter, which is a t_tetri pointer called tetri. Next we declare three variables. Two multidimensional character arrays. One called result, another called tetri_map. Then we declare an integer called size. After we initialize the size to the return of the smallest_board function.</p>
+	
+<p>*Note: Setting size to the return of the smallest_board function is a deviation of the original code. Instead of initializing it to two, we instead use a formula to figure out the smallest possible board size a given number of tetriminos can fit into. This formula is the square root of the number of tetriminos multiplied by 4. This reduces the amount of boards we have to check drastically as we add more tetrimons. Say we have 23 tetriminos, we no longer have to check boards 2, 3, 4, 5. Instead we can skip straight to 9 boards which is a massive time saver. Saving us a large amount of operations we have to run.  </p>
 				</div>
 				
 				<div>
-					<img src="./imgs/fillit/solve.png" alt=""> </img>
+					<img src="./imgs/fillit/solve2.png" alt=""> </img>
+				</div>
+				
+				<div>
+					<h2> smallest_board </h2>
+					<p> 	This function returns an integer. It takes one parameter that is a pointer to a t_tetri called tetri. We then declare four variables. Three integers named amount_of_tetri, size, and j. We then declare a pointer to a t_tetri called tmp. We then initialize the value of amount_of_tetri to 0, j to 2, then temp to tetri. Next we create a while loop with the condition of while the next data value in the tmp struct is not equal to null. The next value represents a pointer to the next struct in the linked list. While this condition is true we increment the amount_of_tetri by one. We then set the value of temp equal to the value of the next data value held in the at temp. This gives us the total amount of tetriminos we have to run the algorithm on. Next we initialize size to the amount_of_tetri multiplied by 4. We then use a while loop with the conditions of while size is greater than j multiplied by j. While these conditions are true we increment j by one. After this we then return the value of j to give us the size of the smallest possible board.  </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/fillit/smallest_board.png" alt=""> </img>
+				</div>
+				
+				<div>
+					<h2> back to solve </h2>
+					<p>Then tetri_map to NULL. After we set tetri_map equal to the return value of tetri_map_new with the tetri_map and size as parameters. <!-- Note here we could optimize size depending on the number of tetri we have passed to generate the smallest possible board size. However, we shall save this for a different time -->.  </p>
+				</div>
+				
+				<div>
+					<img src="./imgs/fillit/solve2.png" alt=""> </img>
 				</div>
 				
 				<div>
@@ -305,7 +351,7 @@
 				</div>
 				
 				<div>
-					<img src="./imgs/fillit/solve.png" alt=""> </img>
+					<img src="./imgs/fillit/solve2.png" alt=""> </img>
 				</div>
 				
 				<div>
@@ -396,7 +442,7 @@
 				</div>
 				
 				<div>
-					<img src="./imgs/fillit/solve.png" alt=""> </img>
+					<img src="./imgs/fillit/solve2.png" alt=""> </img>
 				</div>
 				
 				<div>
