@@ -134,6 +134,21 @@ main{
 	cursor: pointer;
 }
 
+
+
+/*.gnl-wrapper {
+	text-align: center;
+	background-color: yellow;
+	justify-content: center;
+}
+
+.gnl-code{
+	width: 70%;
+	text-align: center;
+	background-color: purple;
+}*/
+
+
 div {
 	padding-left: 3%;
 	padding-right: 3%;
