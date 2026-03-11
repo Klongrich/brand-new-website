@@ -31,6 +31,10 @@ nav ul {
 		color: white;
 		font-size: 14px;
 	}
+	
+	h2 {
+		font-size: 16px;
+	}
 }
 
 
@@ -39,7 +43,12 @@ nav ul {
 		color: white;
 		font-size: 20px;
 	}
+	
+	h2 {
+		
+	}
 }
+
 
 button {
 	background-color: rgb(72, 72, 72);
@@ -80,11 +89,15 @@ main{
 		height: 100%;
 		grid-template: .1fr .1fr .1fr .1fr .1fr / 1fr;
 		justify-content: space-around;
-		column-gap: 65px;
 		row-gap: 65px;
 	}
 	
-	
+	div {
+		padding-left: 2%;
+		padding-right: 2%;
+		line-height: 1.7;
+		align-content: center;
+	}
 	
 }
 
@@ -97,63 +110,13 @@ main{
 		column-gap: 65px;
 		row-gap: 65px;
 	}
-}
-
-.flex-box img{
-	margin-top: 15px;	
-	margin-bottom: 15px;
-}
-
-.flex-box {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: wrap;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.functionLinks{
-	text-align: left;
-	margin-top: 10px;
-}
-
-.functionLinks a {
-	padding-left: 8px;
-	padding-right: 8px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	color: darkgrey;
-	text-decoration: none;
-	background-color: rgb(90, 90, 90);
-	border: 1px solid black;
-}
-
-.functionLinks a:hover {
-	background-color: black;
-	cursor: pointer;
-}
-
-
-
-/*.gnl-wrapper {
-	text-align: center;
-	background-color: yellow;
-	justify-content: center;
-}
-
-.gnl-code{
-	width: 70%;
-	text-align: center;
-	background-color: purple;
-}*/
-
-
-div {
-	padding-left: 3%;
-	padding-right: 3%;
-	line-height: 1.7;
-	align-content: center;
+	
+	div {
+		padding-left: 3%;
+		padding-right: 3%;
+		line-height: 1.7;
+		align-content: center;
+	}
 }
 
 img {
