@@ -192,13 +192,15 @@ The final return value is multiplied by sign to return the final value that is p
 <h2> itoa </h2>
 <p> This function is used to convert an integer into a character array. First we create three variables. A character array called str, an integer called i, then a long called num. Next, we sent num equal to n by casting a long variable on the integer. Then we use a function from the stdlib called malloc to allocate memory to the character array we initialized. We typecast a character array by using (char *) before calling malloc. We then set the amount of memory to malloc by calling the sizeof(char) * len(n) + 1. We use a + 1 to ensure room to add the '0\' null pointer to make sure we end the character array. </p>
 
-<p> The len functino takes a parameter call n. Then we initialize an integer called i. We then set i equal to 0. Next we check to see if n is less than zero to see if it is a negative number. We iterate i here to account for the extra space needed to store the '-' sign in the character array. We then turn n into a positive number. Next, we check if n is equal to 0. if it is we again increment i to account for that character in the new character array. Next, we run a while loop on n while dividing it by 10 in order to figure out how many spaces or characters are going to be needed in order to properly allocate the necessary memory for the new character array that is going to store the text value of the number. After we return i which has the length of the new character array needed to properly allocate storage for it. </p>
+<p> The len function takes a parameter called n. Then we initialize an integer called i. We then set i equal to 0. Next we check to see if n is less than zero to see if it is a negative number. If it is, we iterate i here to account for the extra space needed to store the '-' sign in the character array. We then turn n into a positive number. Next, we check if n is equal to 0. if it is we again increment i to account for that character in the new character array. Next, we run a while loop on n while dividing it by 10 in order to figure out how many spaces or characters are going to be needed in order to properly allocate the necessary memory for the new character array that is going to store the text value of the number. After we return i which has the length of the new character array needed to properly allocate storage for it. </p>
 					
 <p>
-Next, we do some error handling in case we get a null return, we exit the function while returning 0. None of the remaining code should be executed. Next, we set i equal to the length of the number. Check again if the number is negative. If it is, we make it positive while setting the first character in our array to '-'. Then if the number is zero, we then set the first character in our array to 0. Then we increment back from i. Next we run a while loop on num. We are then setting each index in the str array to the corresponding value of (num % 10) + '0'. Then divide num by 10. Say we have the number 123. First (123 % 10) + '0' turns into 3 + '0' giving it the value of '3' or 51 as the last character. Next, it does (12 % 10) + '0' turns into 2 + '0' giving it the value of '2' or 52 for the character behind it. Finally, it'll get (1 % 10) + '0' turns into 1 + '0' giving it a value of '1' or 51 for the final character.
+Next, we do some error handling in case we get a null return. If we get a null return we exit the function while returning 0. None of the remaining code should be executed. Next, we set i equal to the length of the number. Check again if the number is negative. If it is, we make it positive while setting the first character in our array to '-'. Then if the number is zero, we then set the first character in our array to 0. Then we increment back from i. Next we run a while loop on num. We are then setting each index in the str array to the corresponding value of (num % 10) + '0'. Then divide num by 10. Say we have the number 123. First (123 % 10) + '0' turns into 3 + '0' giving it the value of '3' or 51 as the last character. Next, it does (12 % 10) + '0' turns into 2 + '0' giving it the value of '2' or 52 for the character behind it. Finally, it'll get (1 % 10) + '0' turns into 1 + '0' giving it a value of '1' or 51 for the final character.
 </p>
 
-<p> Lastly, we have str[len(n)] set the very last character to a '\0' or a null pointer to finish off the string, which is now '123\0' then returning the character array </p>
+<p> 
+Lastly, we have str[len(n)] set the very last character to a '\0' or a null pointer to finish off the string, which is now '123\0' then returning the character array
+</p>
 				</div>
 				
 				<div>
@@ -208,8 +210,9 @@ Next, we do some error handling in case we get a null return, we exit the functi
 				
 				<div id="lstadd">
 <h2> lstadd </h2>
-<p>This function is used to add an item to a linked list in C. First we pass a pointer to an array of t_list. t_list is a struct defined in the header file libft.h. We then pass a pointer to another struct called new. </p>
-<p> First we error handle by making sure new is not null when passed. Next, we then set new to the next iteam in the passed list alast. Then we also equal to the new list with the added information. </p>
+<p>This function is used to add an item to a linked list in C. This function takes two parameters. One is a pointer to an array of t_list called alst.  t_list is a struct defined in the header file called libft.h. The next is a pointer to a t_list called new. </p>
+
+<p> First we error handle by making sure new is not null when passed. Next, we then set the data value of the variable next within a t_list struct called new, that was passed as a parameter, to a pointer alst. Then we also set a pointer alst equal to new after. </p>
 				</div>
 				
 				<div>
