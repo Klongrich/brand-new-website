@@ -84,8 +84,12 @@ main{
 		row-gap: 65px;
 	}
 	
-	
-	
+	.gnl-image img {
+	    width: 100%;       /* Fill the grid cell width */
+	    height: auto;      /* Maintain aspect ratio */
+	    object-fit: cover; /* Crop if needed without distortion */
+	    border-radius: 8px; /* Optional rounded corners */
+	}
 }
 
 @media screen and (min-width: 500px) {
@@ -96,6 +100,13 @@ main{
 		justify-content: space-around;
 		column-gap: 65px;
 		row-gap: 65px;
+	}
+	
+	.gnl-image img {
+	    width: 80%;       /* Fill the grid cell width */
+	    height: auto;      /* Maintain aspect ratio */
+	    object-fit: cover; /* Crop if needed without distortion */
+	    border-radius: 8px; /* Optional rounded corners */
 	}
 }
 
@@ -134,8 +145,6 @@ main{
 	cursor: pointer;
 }
 
-
-
 /*.gnl-wrapper {
 	text-align: center;
 	background-color: yellow;
@@ -156,7 +165,7 @@ div {
 	align-content: center;
 }
 
-img {
+.flex-box img {
     width: 100%;       /* Fill the grid cell width */
     height: auto;      /* Maintain aspect ratio */
     object-fit: cover; /* Crop if needed without distortion */
