@@ -207,8 +207,8 @@ Next, we do some error handling in case we get a null return, we exit the functi
 				
 				<div id="lstadd">
 <h2> lstadd </h2>
-<p>This function is used to add an item to a linked list in C. First we pass a pointer to an array of t_list. t_list is a struct defined in the header file libft.h. We then pass a pointer to another struct called new. </p>
-<p> First we error handle by making sure new is not null when passed. Next, we then set new to the next iteam in the passed list alast. Then we also equal to the new list with the added information. </p>
+<p> This function is used to add an item to a linked list in C. This function takes two parameters. One is a pointer to an array of t_list called alst.  t_list is a struct defined in the header file called libft.h. The next is a pointer to a t_list called new. </p>
+<p> First we error handle by making sure new is not null when passed. Next, we then set the data value of the variable next within a t_list struct called new, that was passed as a parameter, to a pointer alst. Then we also set a pointer alst equal to new after. </p>
 				</div>
 				
 				<div>
