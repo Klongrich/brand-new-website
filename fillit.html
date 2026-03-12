@@ -52,6 +52,94 @@
 					</div>
 				</div>
 					<br>
+					
+<h2> Function Flow </h2>
+<div class="functionLinks">
+	
+	<!-- <p><a href=""> Main</a><p>
+	<p><a href="">stock_Str</a><p>
+	<p><a href="">back to main</a><p>
+	<p><a href="">check_str</a><p>
+	<p><a href="">validate_tetrimino</a><p>
+	<p><a href="">count_valid_characters</a><p>
+	<p><a href="">back to check_str</a><p>
+    <p><a href="">back to main </a><p>
+    <p><a href="">extract_tetriminos</a><p>
+	<p><a href="">count_tetriminos</a><p>
+	<p><a href="">back to extract_tetriminos</a><p>
+	<p><a href="">convert_then_store_xy_coordinates</a><p>
+    <p><a href="">back to extract_tetriminos </a><p>
+    <p><a href="">place_tetri_to_top_left</a><p>
+	<p><a href="">back to extract_tetrimions</a><p>
+	<p><a href="">back to main</a><p>
+    <p><a href="">solve</a><p>	 -->							
+	<ul>
+		<a href="#main-1"> Main</a>
+-->
+		<a href="#stock_str">Stock_str</a>
+-->
+		<a href="">Back To Main</a>
+-->
+		<a href="">check_str</a>
+-->
+		<a href="">validate_tetrimino</a>
+-->
+		<a href="">count_valid_characters</a>
+-->
+		<a href="">back to check_str</a>
+-->
+		<a href="">back to main</a> 
+-->
+		<a href="">extract_tetriminos</a>
+-->
+		<a href="">count_tetriminos</a>
+-->
+		<a href="">back to extract_tetrimions</a>
+-->
+		<a href="">convert_then_store_xy_corrdinates</a>
+-->
+		<a href="">Back to extract_tetriminos</a>
+-->
+		<a href="">place_tetri_to_top_left</a>
+-->
+		<a href="">back to extract_tetriminos</a>
+-->
+		<a href="">back to main</a>
+-->
+		<a href="">solve</a>
+-->
+		<a href="">smallest_board</a>
+-->
+		<a href="">back to solve</a>
+-->
+		<a href="">tetri_map_new</a>
+-->
+		<a href="">back to solve</a>
+-->
+		<a href="">algo</a>
+-->
+		<a href="">xy_tetri (*depreceated)</a>
+-->
+		<a href="">back to algo</a>
+-->
+		<a href="">check_tetri (*depreceated)</a>
+-->
+		<a href="">back to algo</a>
+-->
+		<a href="">insert_tetri (*depreceated)</a>
+-->
+		<a href="">back to algo</a>
+-->
+		<a href="">remove_tetri</a>
+-->
+		<a href="">back to algo</a>
+-->
+		<a href="">back to solve</a>
+-->
+		<a href="">print_map</a>
+		
+	</ul> 
+</div>
 <p> This project has a couple main parts that we can break it down into. First is reading the file then initializing it into a character array. </p>
 
 <p> Second, we have to check the parsed string for any invalid tetriminos that are passed into the program. If any are invalid, we have to print "error" out to the terminal. If there are no errors, we then take the error-free data, then begin to parse it further into a linked list of data. </p>
@@ -69,7 +157,7 @@
 			
 			<div class="container">
 				
-				<div>
+				<div id="main-1">
 <h2> Main </h2>
 <p> Here we have the function main that returns an integer. This main function is the function that is ran after the program is compiled. At the top here we include our .h or header files that allow us to use any of the functions listed there within the main function itself. Next we shall take a look at the parameters passed here. We have two parameters: one is an integer called argc, another is a multidimensional array called argv. Next we declare three different variables: a character pointer stock, an integer called fd, then a t_teri called tetri. fd is short hard for file description while we shall go over what a t_tetri struct is in a moment.</p>
 
@@ -84,7 +172,7 @@
 					<img src="./imgs/fillit/main.png" alt=""> </img>
 				</div>
 					
-				<div>
+				<div id="stock_str">
 <h2> stock_str </h2>
 <p> This function is located in the read.c file. We return a character array from this function. It takes one parameter called, which is an integer called fd. We then declare four variables. One integer called read_status, then another integer called i, then another character called c, then a character array called str. We then initialize i to zero, then str to NULL, then read_status to the return value of the read() function from the fcntl library. The read function takes 3 parameters. The first one is the file descriptor returned from the open() function that describes the file path that we'll be reading from. Second is a reference in memory to where the character variable is stored that we'll be writing the information to from the file we are reading. The third is the number of characters or bytes we shall be reading at a given time. </p>
 <p> After this, we check to see if read_status returned less than 0. If it does, we return NULL from the function. Then, we check to see if the read_status is equal to 1 which indicates a successful read. We then initialize str to a malloced string of 600 characters. This gives us the ability to read about 28 tetriminos, which is more than the max amount we need to handle for this project. </p>
