@@ -12,6 +12,7 @@
 	<body>
 		<nav>
 			<ul>
+				<li> <a href="#top">Back to top  </a> </li>
 				<li> <a href="index.html"> Home </a> </li>
 				<li> <a href="coding.html"> Programming </a> </li>
 				<li> <a href="travel.html"> Travel </a> </li>
@@ -74,69 +75,69 @@
 	<p><a href="">back to main</a><p>
     <p><a href="">solve</a><p>	 -->							
 	<ul>
-		<a href=""> Main</a>
+		<a href="#main-1"> Main</a>
 -->
-		<a href="">Stock_str</a>
+		<a href="#stock_str">Stock_str</a>
 -->
-		<a href="">Back To Main</a>
+		<a href="#main-2">Back To Main</a>
 -->
-		<a href="">check_str</a>
+		<a href="#check_str">check_str</a>
 -->
-		<a href="">validate_tetrimino</a>
+		<a href="#validate_tetrimino">validate_tetrimino</a>
 -->
-		<a href="">count_valid_characters</a>
+		<a href="#count_valid_characters">count_valid_characters</a>
 -->
-		<a href="">back to check_str</a>
+		<a href="#check_str-2">back to check_str</a>
 -->
-		<a href="">back to main</a> 
+		<a href="#main-3">back to main</a> 
 -->
-		<a href="">extract_tetriminos</a>
+		<a href="#extract_tetriminos">extract_tetriminos</a>
 -->
-		<a href="">count_tetriminos</a>
+		<a href="#count_tetriminos">count_tetriminos</a>
 -->
-		<a href="">back to extract_tetrimions</a>
+		<a href="#extract_tetriminos-2">back to extract_tetrimions</a>
 -->
-		<a href="">convert_then_store_xy_corrdinates</a>
+		<a href="#convert_then_store_xy_coordinates">convert_then_store_xy_coordinates</a>
 -->
-		<a href="">Back to extract_tetriminos</a>
+		<a href="#extract_tetriminos-3">Back to extract_tetriminos</a>
 -->
-		<a href="">place_tetri_to_top_left</a>
+		<a href="#place_tetri_to_top_left">place_tetri_to_top_left</a>
 -->
-		<a href="">back to extract_tetriminos</a>
+		<a href="#extract_tetriminos-4">back to extract_tetriminos</a>
 -->
-		<a href="">back to main</a>
+		<a href="#main-4">back to main</a>
 -->
-		<a href="">solve</a>
+		<a href="#solve">solve</a>
 -->
-		<a href="">smallest_board</a>
+		<a href="#smallest_board">smallest_board</a>
 -->
-		<a href="">back to solve</a>
+		<a href="#solve-2">back to solve</a>
 -->
-		<a href="">tetri_map_new</a>
+		<a href="#tetri_map_new">tetri_map_new</a>
 -->
-		<a href="">back to solve</a>
+		<a href="#solve-3">back to solve</a>
 -->
-		<a href="">algo</a>
+		<a href="#algo">algo</a>
 -->
-		<a href="">xy_tetri (*deprecated)</a>
+		<a href="#xy_tetri">xy_tetri (*deprecated)</a>
 -->
-		<a href="">back to algo</a>
+		<a href="#algo-2">back to algo</a>
 -->
-		<a href="">check_tetri (*deprecated)</a>
+		<a href="#check_tetri">check_tetri (*deprecated)</a>
 -->
-		<a href="">back to algo</a>
+		<a href="#algo-3">back to algo</a>
 -->
-		<a href="">insert_tetri (*deprecated)</a>
+		<a href="#insert_tetri">insert_tetri (*deprecated)</a>
 -->
-		<a href="">back to algo</a>
+		<a href="#algo-4">back to algo</a>
 -->
-		<a href="">remove_tetri</a>
+		<a href="#remove_tetri">remove_tetri</a>
 -->
-		<a href="">back to algo</a>
+		<a href="#algo-5">back to algo</a>
 -->
-		<a href="">back to solve</a>
+		<a href="#solve-4">back to solve</a>
 -->
-		<a href="">print_map</a>
+		<a href="#print_map">print_map</a>
 		
 	</ul> 
 </div>
@@ -184,7 +185,7 @@
 					<img src="./imgs/fillit/stock_str.png" alt=""> </img> 
 				</div>
 				
-				<div>
+				<div id="main-2">
 <h2> Back To Main </h2>
 <p> Now that we have the return value from stock_str() function we covered above. We then run an if statement on the return value of check_str() function with stock, which holds the return value as a parameter.</p>
 				</div>
@@ -193,7 +194,7 @@
 					<img src="./imgs/fillit/main.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="check_str">
 <h2> check_str </h2>
 <p> This function returns an integer. First we take a character pointer called characters_read which holds the data we read in from the file passed. Next we declare two variables. One integer j then another integer i. We initialize both of these integers to 0. After we begin a while loop that runs while the indexed value of characters_read at i + j is not equal to a null pointer. </p>
 
@@ -206,7 +207,7 @@
 					<img src="./imgs/fillit/check_str.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="validate_tetrimino">
 <h2> validate_tetrimino </h2>
 <p> This function returns an integer. It also takes two parameters. One is a character pointer called characters_read, another is an integer called terimino_start. We first declare two variables. One integer called count, then another integer called j. After we initialize both of them to 0. </p>
 
@@ -254,7 +255,7 @@
 					<img src="./imgs/fillit/validate_tetrimino.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="count_valid_characters">
 <h2> count_valid_characters </h2>
 <p> This function returns an integer with two parameters taken. One parameter is a character pointer named characters_read the next is an integer called j. First we declare four integers named dash, dot, newline, i. Next, we initialize all these variables to 0. Next we start with a while loop where we say while i plus j is less than 20 plus j and the that charcters_read character indexed at i plus j is not equal to a null pointer. Next we have three if statements. The first if statement checks to see if the character value at the index in characters_read is equal to a '#'. If it is a dash, it is incremented by one. The next one checks to see if it is a '.'. If it is a dot, it is incremented by one. The third one checks to see if it is a '\n'. If it is newline is incremented by one. After that, we then iterate i. Once the while loop is completed, checking the tetrimino, we then make sure that the dash is equal to 4 and the dot is equal to 12 and the new line is equal to 4. This makes sure we have counted 4 dashes which represent the tetrimino squares. A total of 12 dots should surround it. Then a total of 4 new lines after this. </p>
 				</div>
@@ -263,7 +264,7 @@
 					<img src="./imgs/fillit/count_valid_char.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="check_str-2">
 <h2> Back To check_str </h2>
 <p> Now that we have covered the validate_tetrimino() function as well as the count_valid_characters() function. If neither of those functions return 0, we then move to setting the value of i to 19. If either of those functions return a 0, we then return 0 from our functions, which gives check_str() a return value of 0, letting our system know to print an "error" while not continuing. After setting the value of i to 19, we then check in our if statement if the indexed value of characters_read at i + j is equal to a '\n' and if the characters_read indexed value at i plus j plus 1 is equal to a null pointer. If either of these conditions are true, we can assume we have made it to the end of the file without an error. We then can return 1 from our function indicating a properly formatted tetrimino file has been passed. If not, we then check to see if the character value at characters_read i plus j is equal to a newline. Then, if the character_read indexed value at i plus j plus 1 is equal to a newline, then if the value of the characters_read indexed value at i plus j plus two is equal to a '.' or if it is equal to a '#'. The first as well as the second check are true, as well as the character value being a '.' or a '#' we can safely assume that we can check the next teterimino that was passed. We then increment j by 21. We use the number 21 to represent the starting place for the next tetrimino within the array of characters that was passed. If this statement is not true, we use a else statment to return a 0, meaning the tetrimino file passed is not properly formatted. This in return allows the system to print an "error" while not continuing the program. </p>
 					
@@ -274,7 +275,7 @@
 					<img src="./imgs/fillit/check_str.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="main-3">
 <h2> Back to main </h2>
 <p> Now you can see here that if the check_str function we just broke down returns a 0, then the if statement here prints an "error" to the terminal indicating an improperly formatted file was passed to the function. If it returns 1 this indicates the file was properly formatted, allowing us to move forward in the program. Next, we use the close function of the fd to close off access to reading the file we opened using the open function. After this, we then set the value of tetri to the return value of stock_tetri. </p>
 				</div>
@@ -283,7 +284,7 @@
 					<img src="./imgs/fillit/main.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="extract_tetriminos">
 					
 <!-- switching to new extract, legacy is at extract_tetriminos1, reminder to update explaintion of differences once format for display is finalized. -->
 <h2> extract_tetriminos </h2>
@@ -296,7 +297,7 @@
 					<img src="./imgs/fillit/extract_tetriminos.png">
 				</div>
 				
-				<div>
+				<div id="count_tetriminos">
 <h2> count_tetriminos </h2>
 <p> This function returns an integer. It takes one parameter, that is a character pointer called str. After we declare two integers. One is called i, the other is called result. We then loop through the indexed value of str while it is not equal to a null pointer. We then check if the character value at the index of the array is equal to a '#' sign. If it is, we increment the result by one. Then we iterate i up to one. Once the loop is done, we can divide the result by four to get the total number of tetriminos. We divide by four because we know each tetrimino is made up of four individual '#'. Meaning dividing by for would use the total number of tetriminos there is. </p>
 				</div>
@@ -305,7 +306,7 @@
 					<img src="./imgs/fillit/count_tetriminos.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="extract_tetriminos-2">
 <h2> back to extract_tetriminos </h2>
 <p> After we get the return value for count_tetriminos we then initialize extracter_tetriminos. We do this by mallocing memory for it that is the sizeof at t_tetri. If it returns null, we then return NULL from the function ending the program. If not, we then initialize tmp to extracted_tetriminos. We then execute the while loop with the condition of amount_of_tetriminos is greater than 0. First we set the c value in the t_tetri temp struct to tetrimino_character. Next we call the </p>
 				</div>
@@ -314,9 +315,9 @@
 					<img src="./imgs/fillit/extract_tetriminos.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="convert_then_store_xy_coordinates">
 <h2> convert_then_store </h2>
-<h2> _xy_corrdinates</h2>
+<h2> _xy_coordinates</h2>
 <p> This function is a void. It takes a pointer to a pointer of a t_tetri called tmp. Then it takes a character pointer called trimmed_valdiate_characters_read. Next we declare two integers. One is called i the next is called j. We then initialize i and j to 0. Next, while the indexed value of trimmed_validated_characters_read at i is not equal to a null pointer, we iterate. We then check if the character value from trimmed_validated_characters_read is equal to a '#'. If it is, we then set out t_tetri tmp's x data value at the j position to i % 5. We then set the y data value at the j position to i / 5. After we iterate j. </p>
 
 <p> The reason we use % 5 as well as divided by 5 is due to the fact there are 5 characters in each row of a teterimino. You have four characters that are either a '.' or a '#' followed by a new line. What this does is create a coordinate system of that particular tetrimino. </p>
@@ -355,7 +356,7 @@
 					<img src="./imgs/fillit/convert_then_store_xy_coordinates.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="extract_tetriminos-3">
 <h2> Back to extract_tetrimninos </h2>
 <p> After we convert, then store the new xy values for each tetrimino we then move forward to calling the malloc function. We initialize the new data from the tmp struct t that is a t_teri to a value of a t_teri. This next value allocates memory for the next part of the linked list. If this function returns null, we return null from the extract_tetriminos function after. Next we call the place_tetri_to_top_left function with a reference in memory to the tmp variable passed as a parameter. 
 	
@@ -368,7 +369,7 @@
 				</div>
 				
 				<!-- Note this is a moved or added function to the orignial code base to increace algothrim optmiziation. Shall think of a good way to display this information. -->
-				<div>
+				<div id="place_tetri_to_top_left">
 						<h2> place_tetri_to_top_left </h2>
 						<p> This function is used to place the tetrimino into it's top left spot from where it was parsed. First we declare the function, which is a void function. Next we pass three parameters. One pointer to a pointer of a t_tetri called tetri. Next, an integer called x than an integer called y. After that we declare three integers. We call these integers pos_x, pos_y, then i. After we initialized these integers. We set i equal to 0, pos_x equal to 100, then pos_y equal to 100. After this, we start a while loop with the condition of i being less than 4. After that, we then check the if the value of the indexed position of the x array stored in the teteri struct is less than the pos_x. If it is we set pos_x to that value. Next we check if the value of the indexed position of the y array stored in the tetri struct is less than pos_y. If it is, we then set pos_y to that value. After that, we increment i. Once that is finished, we subtract 1 from i then begin a loop. We use this while loop with the condition of i is greater than or equal to 0. We update the tetri struct data integer array of x at the i index to the value of this value subtracted from the pos_x added to the value of x passed in the parameter. This ensures that we move the x value to the top left while maintaining the spot we are checking on the board. Next we update the tetri struct data integer array of y at the i index to the value of this value subtracted by pos_y added to y. </p>
 				</div>
@@ -377,7 +378,7 @@
 					<img src="./imgs/fillit/place_tetri_to_top_left.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="extract_tetriminos-4">
 					<h2> back to extract_tetriminos </h2>
 					<p> After setting the values of the tetriminos to the top left. We then move forward to setting temp equal to the next value we malloced above. Then, we increment amount_of_tetriminos back by one as we have successfully converted, then stored a tetrimino. Next we increment the tetrimino_character count by one. This moves the character from an 'A' to a 'B' so on, then so fourth. After we add 21 to tetrimino_start. We use the number 21 as it represents the character length of a tetrimino once read into the system. After we loop through all the available teterimions we then exit the loop then set the next value in the linked list to NULL to signal the end of the linked list. After we return extracted_tetriminos. </p>
 				</div>
@@ -386,7 +387,7 @@
 					<img src="./imgs/fillit/extract_tetriminos.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="main-4">
 <h2> Back to main </h2>
 <p> Now that we have tetri equal to the return value of extract_tetriminos we then pass it as a parameter to the solve function. </p>
 				</div>
@@ -395,7 +396,7 @@
 					<img src="./imgs/fillit/main.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="solve">
 <h2> solve </h2>
 <p> This function is a void function, meaning it does not return anything. It takes one parameter, which is a t_tetri pointer called tetri. Next we declare three variables. Two multidimensional character arrays. One called result, another called tetri_map. Then we declare an integer called size. After we initialize the size to the return of the smallest_board function.</p>
 	
@@ -406,7 +407,7 @@
 					<img src="./imgs/fillit/solve2.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="smallest_board">
 					<h2> smallest_board </h2>
 					<p> 	This function returns an integer. It takes one parameter that is a pointer to a t_tetri called tetri. We then declare four variables. Three integers named amount_of_tetri, size, and j. We then declare a pointer to a t_tetri called tmp. We then initialize the value of amount_of_tetri to 0, j to 2, then temp to tetri. Next we create a while loop with the condition of while the next data value in the tmp struct is not equal to null. The next value represents a pointer to the next struct in the linked list. While this condition is true we increment the amount_of_tetri by one. We then set the value of temp equal to the value of the next data value held in the at temp. This gives us the total amount of tetriminos we have to run the algorithm on. Next we initialize size to the amount_of_tetri multiplied by 4. We then use a while loop with the conditions of while size is greater than j multiplied by j. While these conditions are true we increment j by one. After this we then return the value of j to give us the size of the smallest possible board.  </p>
 				</div>
@@ -415,7 +416,7 @@
 					<img src="./imgs/fillit/smallest_board.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="solve-2">
 					<h2> back to solve </h2>
 					<p>Then tetri_map to NULL. After we set tetri_map equal to the return value of tetri_map_new with the tetri_map and size as parameters. <!-- Note here we could optimize size depending on the number of tetri we have passed to generate the smallest possible board size. However, we shall save this for a different time -->.  </p>
 				</div>
@@ -424,7 +425,7 @@
 					<img src="./imgs/fillit/solve2.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="tetri_map_new">
 <h2> tetri_map_new </h2>
 <p> This function returns a multidimensional character array called tetri_map_new. It takes two parameters, one called map that is a multidimensional character array, then another called size that is an integer. Next we declare two variables. One integer called x then another integer called y. We then set y equal to 0. Then, we initialize the map by typecasting a multidimensional character array to malloc that is the sizeof a character array multiplied by the size parameter passed plus one. If it returns null, we return null from the function. After we run a while loop with the condition that y is less than size. We then malloc a spot for the y indexed value of map by typecasting a character array to malloc that is the sizeof of a character multiplied by the size parameter passed plus one. If it returns null we then return null from the function ending the function call. Then we set the value of x equal to 0. Afterwards, we run another while loop while x is less than size. We set the yx index value of the multidimensional array of map to equal a '.' character. We then iterate x. This is essentially adding the '.' characters to the board after we allocate space for the array. After the end of the while loop, we set the final character to a null pointer to end that in particular character array. After we iterate y. We do this over than over until y is less than size. After we add a 0 to the final index value of map then we return the newly created map back to the solve function.</p>
 				</div>
@@ -433,7 +434,7 @@
 					<img src="./imgs/fillit/tetri_map_new.png"> </imgs>
 				</div>
 				
-				<div>
+				<div id="solve-3">
 <h2> back to solve </h2>
 <p> After we set tetri_map to the return value of tetri_map_new covered above, we then initialize the result to NULL. Next we run a while loop while the return value from alog is null. We set the return value from algo to result, then use a ! to check if that value is null or not. If it is, we then increment size. Use the ft_memdel function to clear the previously allocated board. Then recall our tetri_map_new with the tetri_map and updated size as parameters. This then gets passed to algo when ran again.</p>
 				</div>
@@ -442,7 +443,7 @@
 					<img src="./imgs/fillit/solve2.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="algo">
 <h2> algo </h2>
 <p> This function returns a multidimensional character array. It takes three parameters. The first parameter character pointer to a pointer called tetri_map. The second is a pointer to a t_tetri struct. The third one is an integer called size. We then declare three variables two integers called x, then y. Then a character pointer to a pointer called map. Next, we check to see if the next value in the tetri struct is equal to NULL. If it is we return the tetri_map from the function. This is an important check as it acts as what we call a base case in recursion. This check is used to see if all the tetrimions have been placed or not. Next, we initialize map to NULL, then y to 0. Next, we start our while loop with the condition that y is less than size. We then set the value of x to 0. Then we loop while x is less than size. We call our xy_tetri function next with the reference is memory to tetri passed as the first parameter. Then x followed by y for the second and third. </p>
 				</div>
@@ -451,7 +452,7 @@
 					<img src="./imgs/fillit/algo.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="xy_tetri">
 <h2> xy_tetri </h2>
 <p> This function is used to place the tetrimino into it's top left spot from where it was parsed. First we declare the function, which is a void function. Next we pass three parameters. One pointer to a pointer of a t_tetri called tetri. Next, an integer called x than an integer called y. After that we declare three integers. We call these integers pos_x, pos_y, then i. After we initialized these integers. We set i equal to 0, pos_x equal to 100, then pos_y equal to 100. After this, we start a while loop with the condition of i being less than 4. After that, we then check the if the value of the indexed position of the x array stored in the teteri struct is less than the pos_x. If it is we set pos_x to that value. Next we check if the value of the indexed position of the y array stored in the tetri struct is less than pos_y. If it is, we then set pos_y to that value. After that, we increment i. Once that is finished, we subtract 1 from i then begin a loop. We use this while loop with the condition of i is greater than or equal to 0. We update the tetri struct data integer array of x at the i index to the value of this value subtracted from the pos_x added to the value of x passed in the parameter. This ensures that we move the x value to the top left while maintaining the spot we are checking on the board. Next we update the tetri struct data integer array of y at the i index to the value of this value subtracted by pos_y added to y. </p>
 				</div>
@@ -460,7 +461,7 @@
 					<img src="./imgs/fillit/xy_tetri.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="algo-2">
 <h2> back to algo </h2>
 <p> After out tetri is in the proper position. We then continue to call the check_tetri function. If this function we are about to explain returns 1, we then move on to call the function recursively. If it returns 0, we skip this, then move to check if map is null or not. If it is not null, we then return map otherwise we will continue to set tetri_map equal to the return value of remove_tetri. After this we increment x </p>
 
@@ -470,7 +471,7 @@
 					<img src="./imgs/fillit/algo.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="check_tetri">
 <h2> check_tetri </h2>
 <p> This function returns an integer. We first take in three parameters. One parameter that is a pointer to a pointer of a character value called map. After this, we pass a parameter that is a pointer to a t_tetri struct called tetri. The integer is called size. We then declare three integers. One called i another called x another called y. After this, we initialize i to 0, then y to 0. We then loop through while y is less than size. We set x to 0 to start at the beginning of the row. While x is less than size, which represents the size of the board, we loop through the function. We have an if statement that checks if the indexed value of the tetri struct integer arrays of y and x are less than size and that those values on the map are equal to a '.' Then we increment i which indicates we have found a valid spot for the tetrimino to be placed. After this, we then check if i is equal to 4 which would indicate all 4 tetri have been placed on the board indicating a successful place to put the tetrimion. If this happens, we return 1 from the function. If we loop through y without getting i to equal 4 we return a 0 indicating an unsuccessful placement on the board. </p>
 				</div>
@@ -479,7 +480,7 @@
 					<img src="./imgs/fillit/check_tetri.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="algo-3">
 <h2> back to algo </h2>
 <p> Depending on the return value of the function above, we decide whether to call the algo function. If we find a valid place for our tetri we then set the map equal to the return value of algo. We pass the return value of insert_tetri with tetri_map, tetri, size function of which we shall cover next. This function places the tetri on the map. Then, for the second parameter, we pass the value of the pointer to the next data type within the tetri struct. This value points to the next struct in the linked list. For the final parameter we pass size. </p>
 </div>
@@ -488,7 +489,7 @@
 					<img src="./imgs/fillit/algo.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="insert_tetri">
 <h2> insert_tetri </h2>
 <p> This function returns a pointer to a pointer of a character. It takes three parameters. A pointer to a pointer character called map. A pointer to a struct called tetri. Then an integer called size. We then declare three integers. We call them x, y, then, i. Next, we initialize i to 0, then y to 0. We loop with the condition that y is less than size. We set x equal to 0. Then we loop with the condition that x is less than size. After this, we check if the integer arrays y and x in the tetric struct are equal values to y and x that are being iterated. If so, we then update the map variable's character to the c value within the tetri struct. The c value represents the character value of the given tetri. After this, we iterate i then continue within the function. After this is done, we return map with the new tetri inserted into the board. </p>
 				</div>
@@ -497,7 +498,7 @@
 					<img src="./imgs/fillit/insert_tetri.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="algo-4">
 <h2> back to algo </h2>
 <p> Again, depending on the return value of check_tetri we either recursively call the function or we do not. Either way, we move to check if map is null or not, if it is not null, we return it. We then set the value of tetri_map to the value of remove_tetri which effectively removes the tetri that was placed on the board.</p>
 				</div>
@@ -506,7 +507,7 @@
 					<img src="./imgs/fillit/algo.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="remove_tetri">
 <h2> remove_tetri </h2>
 <p> This function returns a pointer to a pointer of a character. It takes three parameters. A pointer to a pointer character called map. A pointer to a struct called tetri. Then an integer called size. After this, we declare two integers. One called x, another called y. We then initialize y to 0. Then, while y is less than size, we loop. Next, we set x equal to 0. After this, we loop through x while it is less than size. We then use an if statement to check if the character value of map at the y and x indexed values is equal to the tetri character. If it is we then set that value to a '.' which removes it from the board. After this, we iterate x, then iterate y until we have had y become greater than size. After we return the map variable which contains an updated map that no longer has those characters.</p>
 				</div>
@@ -515,7 +516,7 @@
 					<img src="./imgs/fillit/remove_tetri.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="algo-5">
 <h2> back to algo </h2>
 <p> We then continue calling this function until either the value of y reaches larger than size, which would return the value of NULL, which would cause our solver function to increase the size of the board or the size parameter, then try this function again. If we return the next value within the given tetri struct in the algo parameters with the value of it being null. We then return the tetri_map. This means all the tetrimions have been placed on the map. This returns a valid solution instead of null. This solution is then returned from algo which leads us back into the solve function. </p>
 				</div>
@@ -524,7 +525,7 @@
 					<img src="./imgs/fillit/algo.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="solve-4">
 <h2> back to solve </h2>
 <p> Once algo returns a board and it is not null. We exit the loop that increases the size of the board. After that, we then print the result, which should have the answer. </p>
 				</div>
@@ -533,7 +534,7 @@
 					<img src="./imgs/fillit/solve2.png" alt=""> </img>
 				</div>
 				
-				<div>
+				<div id="print_map">
 <h2> print_map </h2>
 <p> This function is a void. It takes a pointer to a pointer of a character as a parameter. Next we initialize i. After we check if the value of the map parameter that was passed is equal to null. If this is true, we call the ft_putendl function to print error out to our terminal. After that, we call return, which ends the function. Next, we initialize i to equal 0. After this, we loop through the indexed value of map while it is not equal to 0. While it is not equal to 0 we use ft_putendl function with the map value along with the index passed as a parameter. This shall print out the pointer to a character withing the map array to the screen. After this, we increment i. Once this loop is finished, the final solution should be printed out to the terminal. </p>
 				</div>
