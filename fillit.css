@@ -48,7 +48,7 @@ nav ul {
 	flex-wrap: wrap;
 /*	margin-top: 20px;*/
 	margin-bottom: 20px;
-	margin-top: -50px;
+	margin-top: -90px;
 }
 
 .flex-box img{
@@ -71,6 +71,8 @@ nav ul {
 
 .functionLinks{
 	text-align: center;
+	margin-top: -50px;
+	margin-bottom: 50px;
 }
 
 .functionLinks a {
