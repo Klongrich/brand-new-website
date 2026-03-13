@@ -127,6 +127,15 @@ div {
 	align-content: center;
 }
 
+div h3:hover{
+	cursor: pointer;
+	color: darkgrey;
+}
+
+#atoi_test p{
+	color: darkgreen;
+}
+
 img {
     width: 100%;       /* Fill the grid cell width */
     height: auto;      /* Maintain aspect ratio */

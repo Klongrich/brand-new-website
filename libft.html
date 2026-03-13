@@ -6,6 +6,7 @@
 		<link href="./libft.css" rel="stylesheet">
 	 
 	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
 		
 	</head>
 
@@ -88,7 +89,7 @@
 			</div>
 			<br> <br>
 			<a href="minishell.html"><button> Go Back </button></a>
-			
+		
 			</div>
 				<br> <br> <br>
 				<div class="container">
@@ -121,9 +122,12 @@
 					<img src="./imgs/libftMakeFile.png" alt=""> </img>
 				</div>
 					
-				<div id="atoi">
-					<h2> ATOI </h2>
 					
+			
+				<div id="atoi">
+					<h2> ATOI </h2> 
+					<h3 style="text-align: right; margin-top: -55px;" onclick="toggleATOItest()"> show test </h3>
+						
 	<p> Here we have the ft_atoi function. This function takes in an array of characters then converts them to an integer. The parameter is an array of characters called str. Two variables, a long called result as well as an integer called sign, are declared on top. Result is initialized to 0 then sign is initialized to 1 before starting the first while loop. </p>
 	<p> The first while loop here iterates through the array of characters str using the pointer symbol here. It is checking for blank space ' ' or any of the character codes between 8 or 13 in the ascii table decimal format. Most of these are newlines, tabs or other spaces that are parsed out of a string before getting to the number characters that are also utilized by the actual atoi function in the c string lib. </p>
 
@@ -138,6 +142,43 @@
 The final return value is multiplied by sign to return the final value that is parsed from the string passed as the parameter *str.
 </p>
 				</div>
+				
+				<div id="atoi_test" style="display:none;">
+					<h2> This is a list of test used on the ft_atoi function </h2>
+					<p> "\n\v\t\r\f -123" - passed </p>
+					<p> "12-3" - passed </p>
+					<p> "-+12" - passed </p>
+					<p> "a123" - passed </p>
+					<p> "123" - passed </p>
+					<p> "-123" - passed </p>
+					<p> "+123" - passed </p>
+					<p> " - 123" - passed </p>
+					<p> "\t -123" - passed </p>
+					<p> "-2147483648" - passed </p>
+					<p> "2147483647" - passed </p>
+					<p> "" - passed</p>
+					<button onclick="toggleATOItest()"> go back </button>
+				</div>
+				
+				<script>
+					let showAtoiTest = false; 
+				
+					function toggleATOItest() {
+						if (showAtoiTest) {
+							showAtoiTest  = false
+						} else {
+							showAtoiTest = true;
+						}
+					
+						if (showAtoiTest) {
+							document.getElementById('atoi').style.display = 'none';
+							document.getElementById('atoi_test').style.display = 'block';
+						} else {
+							document.getElementById('atoi').style.display = 'block';
+							document.getElementById('atoi_test').style.display = 'none';
+						}
+					}
+				</script>
 				
 				<div>
 					<img src="./imgs/libft/atoi.png" alt=""> </img>
