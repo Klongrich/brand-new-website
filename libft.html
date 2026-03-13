@@ -59,7 +59,7 @@
 				<a href="#strcat">strcat</a>
 				<a href="#strchr">strchr</a>
 				<a href="#strclr">strclr</a>
-				<a href="#strcmp">strcmp</a>
+				<a href="#strcmp">strcmp (*deprecated)</a>
 				<a href="#strcpy">strcpy</a>
 				<a href="#strdel">strdel</a>
 				<a href="#strdup">strdup</a>
@@ -72,7 +72,7 @@
 				<a href="#strmap">strmap</a>
 				<a href="#strmapi">strmapi</a>
 				<a href="#strncat">strncat</a>
-				<a href="#strncmp">strncmp</a>
+				<a href="#strncmp">strncmp (*deprecated)</a>
 				<a href="#strncpy">strncpy</a>
 				<a href="#strnequ">strnequ</a>
 				<a href="#strnew">strnew</a>
@@ -500,7 +500,7 @@ Lastly, we have str[len(n)] set the very last character to a '\0' or a null poin
 				</div>
 				
 				<div id="strcmp">
-<h2> strcmp </h2>
+<h2> strcmp (*deprecated) </h2>
 <p> This function returns an integer that takes 2 parameters. Both parameters are constant character pointers called s1 then s2. Next we loop through the s1 pointer as long as it is not equal to null. Then we use an if statement to check if the character s1 is not equal to s2 while typecasting an unsigned character pointer. This makes it so that values can not be negative while using an unsigned character. If the values are not equal, the function returns the value of s1 subtracted from s2. If they are equal, we iterate s1 as well as s2. If the function iterates entirely through s1 the while loop stops, then the value of s1 subtracted from s2 is then returned in the function. This function is used to compare character arrays. </p>
 				</div>
 				
@@ -619,7 +619,7 @@ Lastly, we have str[len(n)] set the very last character to a '\0' or a null poin
 				</div>
 				
 				<div id="strncmp">
-<h2> strncmp </h2>
+<h2> strncmp (*deprecated) </h2>
 <p> This function returns an integer. It takes three parameters. The first parameter is a constant character pointer s1. The second is a constant character pointer s2. The third is a size_t called n. We start the function by running a while loop while n is not equal to 0. The loop subtracts 1 from end every cycle using the -- on the end of it. The first if statement checks if the character pointer s1 is not equal to s2 while castyping an unsigned character pointer to each. If they are not equal, the function returns the value of s1 subtracted from s2. It then moves on to check if s1 and s2 are null. If so, it calls the break function which ends the loop. If neither of those conditions are met. It then iterates the s1 as well as the s2 character pointers. This is a way to compare strings or character arrays up to a certain length that is established by the size_t n parameter that is passed into the function. </p>
 				</div>
 				
