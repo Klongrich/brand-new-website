@@ -127,7 +127,7 @@
 -->
 		<a href="#algo-3">back to algo</a>
 -->
-		<a href="#insert_tetri">insert_tetri (*deprecated)</a>
+		<a href="#insert_tetri">insert_tetri</a>
 -->
 		<a href="#algo-4">back to algo</a>
 -->
@@ -497,8 +497,8 @@
 				
 				<div id="insert_tetri">
 <h2> insert_tetri </h2>
-<p> This function returns a pointer to a pointer of a character. It takes three parameters. A pointer to a pointer character called map. A pointer to a struct called tetri. Then an integer called size. We then declare three integers. We call them x, y, then, i. Next, we initialize i to 0, then y to 0. We loop with the condition that y is less than size. We set x equal to 0. Then we loop with the condition that x is less than size. After this, we check if the integer arrays y and x in the tetric struct are equal values to y and x that are being iterated. If so, we then update the map variable's character to the c value within the tetri struct. The c value represents the character value of the given tetri. After this, we iterate i then continue within the function. After this is done, we return map with the new tetri inserted into the board. </p>
-				</div>
+<p> This is a void function. It takes four total parameters. One is a pointer to a character pointer called map. Another is a pointer to a t_tetri called tetri. Then two integers called y and x. Next we declare an integer called i. We then initialize it to 0. Next we start a while loop with the condition of i being less than 4. Next we call the index value of y plus the index value of i at the y integer array on the tetri struct. Then x plus the index value of i in the x integer array held by the tetri struct. We then set this value equal to the value of the c character held within the tetri struct. We are doing this to place the tetri on the map after we found a valid spot. This is more efficient than the old method as we are inserting the tetri directly to the board rather than looping through the entire thing. This saves lots of calculations as the board grows in size. </p>
+			</div>
 				
 				<div>
 					<img src="./imgs/fillit/insert_tetri.png" alt=""> </img>
