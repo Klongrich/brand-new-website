@@ -119,10 +119,6 @@
 -->
 		<a href="#algo">algo</a>
 -->
-		<a href="#xy_tetri">xy_tetri (*deprecated)</a>
--->
-		<a href="#algo-2">back to algo</a>
--->
 		<a href="#check_tetri">check_tetri</a>
 -->
 		<a href="#algo-3">back to algo</a>
@@ -445,31 +441,13 @@
 				
 				<div id="algo">
 <h2> algo </h2>
-<p> This function returns a multidimensional character array. It takes three parameters. The first parameter character pointer to a pointer called tetri_map. The second is a pointer to a t_tetri struct. The third one is an integer called size. We then declare three variables two integers called x, then y. Then a character pointer to a pointer called map. Next, we check to see if the next value in the tetri struct is equal to NULL. If it is we return the tetri_map from the function. This is an important check as it acts as what we call a base case in recursion. This check is used to see if all the tetrimions have been placed or not. Next, we initialize map to NULL, then y to 0. Next, we start our while loop with the condition that y is less than size. We then set the value of x to 0. Then we loop while x is less than size. We call our xy_tetri function next with the reference is memory to tetri passed as the first parameter. Then x followed by y for the second and third. </p>
+<p> This function returns a multidimensional character array. It takes three parameters. The first parameter character pointer to a pointer called tetri_map. The second is a pointer to a t_tetri struct. The third one is an integer called size. We then declare three variables two integers called x, then y. Then a character pointer to a pointer called map. Next, we check to see if the next value in the tetri struct is equal to NULL. If it is we return the tetri_map from the function. This is an important check as it acts as what we call a base case in recursion. This check is used to see if all the tetrimions have been placed or not. Next, we initialize map to NULL, then y to 0. Next, we start our while loop with the condition that y is less than size. We then set the value of x to 0. Then we loop while x is less than size. We then continue to call the check_tetri function. If this function we are about to explain returns 1, we then move on to the insert_tetri function then call the function recursively. If it returns 0, we skip this, then we continue to set tetri_map equal to the return value of remove_tetri. After this we increment x  </p>
 				</div>
 				
 				<div>
 					<img src="./imgs/fillit/algo.png" alt=""> </img>
 				</div>
-				
-				<div id="xy_tetri">
-<h2> xy_tetri </h2>
-<p> This function is used to place the tetrimino into it's top left spot from where it was parsed. First we declare the function, which is a void function. Next we pass three parameters. One pointer to a pointer of a t_tetri called tetri. Next, an integer called x than an integer called y. After that we declare three integers. We call these integers pos_x, pos_y, then i. After we initialized these integers. We set i equal to 0, pos_x equal to 100, then pos_y equal to 100. After this, we start a while loop with the condition of i being less than 4. After that, we then check the if the value of the indexed position of the x array stored in the teteri struct is less than the pos_x. If it is we set pos_x to that value. Next we check if the value of the indexed position of the y array stored in the tetri struct is less than pos_y. If it is, we then set pos_y to that value. After that, we increment i. Once that is finished, we subtract 1 from i then begin a loop. We use this while loop with the condition of i is greater than or equal to 0. We update the tetri struct data integer array of x at the i index to the value of this value subtracted from the pos_x added to the value of x passed in the parameter. This ensures that we move the x value to the top left while maintaining the spot we are checking on the board. Next we update the tetri struct data integer array of y at the i index to the value of this value subtracted by pos_y added to y. </p>
-				</div>
-				
-				<div>
-					<img src="./imgs/fillit/xy_tetri.png" alt=""> </img>
-				</div>
-				
-				<div id="algo-2">
-<h2> back to algo </h2>
-<p> After out tetri is in the proper position. We then continue to call the check_tetri function. If this function we are about to explain returns 1, we then move on to call the function recursively. If it returns 0, we skip this, then move to check if map is null or not. If it is not null, we then return map otherwise we will continue to set tetri_map equal to the return value of remove_tetri. After this we increment x </p>
-
-				</div>
-				
-				<div>
-					<img src="./imgs/fillit/algo.png" alt=""> </img>
-				</div>
+			
 				
 				<div id="check_tetri">
 <h2> check_tetri </h2>
@@ -488,7 +466,7 @@
 				
 				<div id="algo-3">
 <h2> back to algo </h2>
-<p> Depending on the return value of the function above, we decide whether to call the algo function. If we find a valid place for our tetri we then set the map equal to the return value of algo. We pass the return value of insert_tetri with tetri_map, tetri, size function of which we shall cover next. This function places the tetri on the map. Then, for the second parameter, we pass the value of the pointer to the next data type within the tetri struct. This value points to the next struct in the linked list. For the final parameter we pass size. </p>
+<p> Depending on the return value of the function above, we decide whether to call the algo function. If we find a valid place for our tetri we then call the insert tetri_function. Next we recsurvily call the algo function with three paramters. One is the the value of tetri_map. Then, for the second parameter, we pass the value of the pointer to the next data type within the tetri struct. This value points to the next struct in the linked list. For the final parameter we pass size. We then set map equal to the return value. if map is not null we have hit our base case then return tetri_map </p>
 </div>
 				
 				<div>
@@ -506,7 +484,7 @@
 				
 				<div id="algo-4">
 <h2> back to algo </h2>
-<p> Again, depending on the return value of check_tetri we either recursively call the function or we do not. Either way, we move to check if map is null or not, if it is not null, we return it. We then set the value of tetri_map to the value of remove_tetri which effectively removes the tetri that was placed on the board.</p>
+<p> Again, depending on the return value of check_tetri we either recursively call the function or we do not. If not, We then set the value of tetri_map to the value of remove_tetri which effectively removes the tetri that was placed on the board.</p>
 				</div>
 				
 				<div>
