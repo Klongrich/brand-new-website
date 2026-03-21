@@ -94,7 +94,9 @@ main{
 		row-gap: 15px;
 		column-gap: 15px;
 	}
-
+	.list-of-countries {
+		display: block;
+	}
 }
 
 @media screen and (min-width: 500px) {
@@ -105,6 +107,12 @@ main{
 		justify-content: space-around;
 		row-gap: 15px;
 		column-gap: 15px;
+	}
+	
+	.list-of-countries {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
 	}
 }
 
@@ -130,6 +138,18 @@ img {
 	padding-bottom: 5%;
 	padding-top: 5%;
 }
+
+.inner-project-box ul{
+	list-style-type: none;
+	text-align: left;	
+}
+
+.inner-project-box li{
+	font-size: 20px;
+	padding: 2px 0;
+	
+}
+
 
 .inner-project-box{
 	background-color: rgb(58, 58, 58);

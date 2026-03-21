@@ -32,10 +32,69 @@
 				
 				<div class="project-box">
 					<div class="inner-project-box">
-						<h2> 48 US states, 20 European countries. </h2>
+						<div id="select">
+							<h2> 20 European Countries </h2>
+							<h2> 48 US states </h2>
+							<button> See States </button>
+							<button onclick="toggleShowCountries()"> See Countries </button>
+						</div>
+							<div id="countries-list" style="display: none">
+									<h2> 20 European Countries </h2>
+									<div class="list-of-countries">		
+								<div>
+									<ul>
+										<li> Iceland </li>
+										<li> Netherlands </li>
+										<li> Belgium  </li>
+										<li> France </li>
+										<li> Switzerland </li>
+										<li> Italy </li>
+										<li> Germany  </li>
+										<li> Denmark </li>
+										<li> Sweden </li>
+										<li> Norway </li>
+									</ul>
+								</div>
+								<div>
+									<ul>
+										<li> Poland </li>
+										<li> Austria </li>
+										<li> Czech Republic </li>
+										<li> Solvikia </li>
+										<li> Hungary </li>
+										<li> Cortia </li>
+										<li> Slovenia  </li>
+										<li> Lichtenstein </li>
+										<li> United Kingdom</li>
+										<li> Ireland </li>		
+									</ul>
+								</div>
+							</div>
+								<button onclick="toggleShowCountries()"> Back </button>
+							</div>
 						<!-- <h2>That's a big deal in Ohio </h2> -->
 					</div>
 				</div>
+				
+				<script>
+					let showCountries = false; 
+				
+					function toggleShowCountries() {
+						if (showCountries) {
+							showCountries  = false
+						} else {
+							showCountries = true;
+						}
+					
+						if (showCountries) {
+							document.getElementById('select').style.display = 'none';
+							document.getElementById('countries-list').style.display = 'block';
+						} else {
+							document.getElementById('select').style.display = 'block';
+							document.getElementById('countries-list').style.display = 'none';
+						}
+					}
+				</script>
 				
 				<div class="project-box">
 					<h2> 20 / 51 </h2>
