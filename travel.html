@@ -21,22 +21,20 @@
 		</nav>
 		
 		<main>
-			<div class="container">
-				
+			<div class="container">	
 				<div class="project-box">
 					<div class="inner-project-box">
 						<h2> 48 States </h2>
 						<h2> 22 Countries </h2>
 					</div>
 				</div>
-				
 				<div id="top-of-box" class="project-box">
 					<div class="inner-project-box">
 						<div id="select">
 							<h2> 20 European Countries </h2>
 							<h2> 48 US states </h2>
 							<button> See States </button>
-							<a href="#top-of-box"><button onclick="toggleShowCountries()"> See Countries </button> </a>
+							<a id="link-to-page" href="#top-of-box"><button onclick="toggleShowCountries()"> See Countries </button> </a>
 						</div>
 							<div id="countries-list" style="display: none">
 									<h2> 20 European Countries </h2>
@@ -70,7 +68,7 @@
 									</ul>
 								</div>
 							</div>
-								<a href="#top-of-box"><button onclick="toggleShowCountries()"> Back </button></a>
+								<a id="link-to-page-back" href="#top-of-box"><button onclick="toggleShowCountries()"> Back </button></a>
 							</div>
 						<!-- <h2>That's a big deal in Ohio </h2> -->
 					</div>
@@ -79,6 +77,18 @@
 				<script>
 					let showCountries = false; 
 				
+					function setLink() {
+						if (window.orientation > -1) {
+							document.getElementById('link-to-page').href = "#top-of-box";
+							document.getElementById('link-to-page-back').href= "#top-of-box";
+						} else {
+							document.getElementById('link-to-page').href= "#";
+							document.getElementById('link-to-page-back').href = "#";
+						}
+					}
+					
+					setLink();
+					
 					function toggleShowCountries() {
 						if (showCountries) {
 							showCountries  = false
@@ -98,7 +108,7 @@
 				
 				<div class="project-box">
 					<h2> 20 / 51 </h2>
-					<img id="teset" src="./imgs/EuropeanCountriesTraveledResize.png" alt=""> </img>
+					<img src="./imgs/EuropeanCountriesTraveledResize.png" alt=""> </img>
 				</div>
 				
 				<div class="project-box">
