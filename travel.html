@@ -33,7 +33,7 @@
 						<div id="select">
 							<h2> 20 European Countries </h2>
 							<h2> 48 US states </h2>
-							<button> See States </button>
+							<button onclick="toggleShowStates()"> See States </button>
 							<a id="link-to-page" href="#top-of-box"><button onclick="toggleShowCountries()"> See Countries </button> </a>
 						</div>
 						
@@ -74,14 +74,79 @@
 						
 						<div id="states-list" style="display:none">
 							<h2> 48 US States </h2>
-						
+							<div class="list-of-states">
+							<div>
+								<ul>
+									<li> Alabama </li>
+									<li> Arizona</li>
+									<li> Arkansas </li>
+									<li> California </li>
+									<li> Colorado </li>
+									<li> Connecticut</li>
+									<li> Delaware </li>
+									<li> Florida </li>
+									<li> Georgia </li>
+									<li> Idaho </li>
+									<li> Illinois </li>
+									<li> Indiana</li>
+									<li> Iowa</li>
+									<li> Kansas</li>
+									<li> Kentucky</li>
+									<li> Louisiana</li>
+									<li> Maine</li>
+									<li> Maryland</li>
+									<li> Massachusetts</li>
+									<li> Michigan</li>
+								</ul>
+							</div>
+							
+							<div>
+								<ul>
+									<li> Minnesota</li>
+									<li> Mississippi</li>
+									<li> Missouri</li>
+									<li> Montana</li>
+									<li> Nebraska</li>
+									<li> Nevada</li>
+									<li> New Hampshire</li>
+									<li> New Jersey</li>
+									<li> New Mexico</li>
+									<li> New York</li>
+									<li> North Carolina</li>
+									<li> North Dakota</li>
+									<li> Ohio</li>
+									<li> Oklahoma</li>
+									<li> Oregon</li>
+									<li> Pennsylvania</li>
+									<li> Rhode Island</li>
+									<li> South Carolina</li>
+									<li> South Dakota</li>
+									<li> Tennessee</li>
+								</ul>
+							</div>
+							
+							<div>
+								<ul>
+									<li> Texas</li>
+									<li> Utah</li>
+									<li> Vermont</li>
+									<li> Virgina</li>
+									<li> Washington</li>
+									<li> West Virgina</li>
+									<li> Wisconsin</li>
+									<li> Wyoming</li>
+								</ul>
+							</div>
+						</div>
+							<a id="link-to-page-back" href="#"><button onclick="toggleShowStates()"> Back </button></a>
 						</div>
 					
 					</div>
 				</div>
 				
 				<script>
-					let showCountries = false; 
+					let showCountries = false;
+					let showStates = false;
 				
 					function setLink() {
 						if (window.orientation > -1) {
@@ -108,6 +173,22 @@
 						} else {
 							document.getElementById('select').style.display = 'block';
 							document.getElementById('countries-list').style.display = 'none';
+						}
+					}
+					
+					function toggleShowStates() {
+						if (showStates) {
+							showStates  = false
+						} else {
+							showStates = true;
+						}
+					
+						if (showStates) {
+							document.getElementById('select').style.display = 'none';
+							document.getElementById('states-list').style.display = 'block';
+						} else {
+							document.getElementById('select').style.display = 'block';
+							document.getElementById('states-list').style.display = 'none';
 						}
 					}
 				</script>

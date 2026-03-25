@@ -97,6 +97,10 @@ main{
 	.list-of-countries {
 		display: block;
 	}
+	
+	.list-of-states {
+		display: block;
+	}
 }
 
 @media screen and (min-width: 500px) {
@@ -112,6 +116,13 @@ main{
 	.list-of-countries {
 		display: flex;
 		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	
+	.list-of-states {
+		display: flex;
+		justify-content: space-around;
+		align-content: top;
 		flex-wrap: wrap;
 	}
 }
