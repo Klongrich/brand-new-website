@@ -33,7 +33,7 @@
 						<div id="select">
 							<h2> 20 European Countries </h2>
 							<h2> 48 US states </h2>
-							<button onclick="toggleShowStates()"> See States </button>
+							<a id="link-to-page-states" href="#top-of-box"><button onclick="toggleShowStates()"> See States </button> </a>
 							<a id="link-to-page" href="#top-of-box"><button onclick="toggleShowCountries()"> See Countries </button> </a>
 						</div>
 						
@@ -151,10 +151,12 @@
 					function setLink() {
 						if (window.orientation > -1) {
 							document.getElementById('link-to-page').href = "#top-of-box";
+							document.getElementById('link-to-page-states').href = "#top-of-box";
 							document.getElementById('link-to-page-back').href= "#top-of-box";
 							document.getElementById('link-to-page-back-states').href= "#top-of-box";
 						} else {
 							document.getElementById('link-to-page').href= "#";
+							document.getElementById('link-to-page-states').href = "#";
 							document.getElementById('link-to-page-back').href = "#";
 							document.getElementById('link-to-page-back-states').href= "#";
 						}
