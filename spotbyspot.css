@@ -73,6 +73,11 @@ main{
 
 }
 
+.day img{
+	height: auto;
+	width: 30px;
+}
+
 
 @media screen and (max-width: 500px) {
 
