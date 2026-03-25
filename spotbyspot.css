@@ -60,18 +60,6 @@ main{
 	
 }
 
-.day {
-	padding-left: 25px;
-}
-
-.day p {
-	padding-left: 25px;
-}
-
-.day h2 {
-	padding-left: 25px;
-
-}
 
 .day img{
 	height: auto;
@@ -80,12 +68,26 @@ main{
 
 
 @media screen and (max-width: 500px) {
-
-
+	.day {
+		text-align: center;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
 }
 
 @media screen and (min-width: 500px) {
+	.day {
+		padding-left: 25px;
+	}
 
+	.day p {
+		padding-left: 25px;
+	}
+
+	.day h2 {
+		padding-left: 25px;
+
+	}
 }
 
 
