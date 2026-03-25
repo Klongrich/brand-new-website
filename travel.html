@@ -138,7 +138,7 @@
 								</ul>
 							</div>
 						</div>
-							<a id="link-to-page-back" href="#"><button onclick="toggleShowStates()"> Back </button></a>
+							<a id="link-to-page-back-states" href="#"><button onclick="toggleShowStates()"> Back </button></a>
 						</div>
 					
 					</div>
@@ -152,9 +152,11 @@
 						if (window.orientation > -1) {
 							document.getElementById('link-to-page').href = "#top-of-box";
 							document.getElementById('link-to-page-back').href= "#top-of-box";
+							document.getElementById('link-to-page-back-states').href= "#top-of-box";
 						} else {
 							document.getElementById('link-to-page').href= "#";
 							document.getElementById('link-to-page-back').href = "#";
+							document.getElementById('link-to-page-back-states').href= "#";
 						}
 					}
 					
