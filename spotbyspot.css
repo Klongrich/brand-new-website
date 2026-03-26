@@ -90,6 +90,10 @@ main{
 	}
 }
 
+.day h1 {
+	text-decoration: underline;
+}
+
 
 footer {
 	background-color: black;
