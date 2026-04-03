@@ -26,6 +26,21 @@
 				
 				<button id="showdays-button" onclick="toggleShowDays()"> Show Days </button>
 				<button id="showdates-button" onclick="toggleShowDates()"> Show Dates </button>
+
+				<!-- <div>
+					<img style="height: 65px;
+								width: 90px;
+								position: absolute;
+								right: 15px;
+								top: -40px;
+								display: block" onclick="toggleShowDays()" id="toggle_button_on" src="imgs/toggle_on_off.png" alt="" > </img>
+					<img style="height: 65px;
+								width: 90px;
+								position: absolute;
+								right: 15px;
+								top: -4px;
+								display: none;" onclick="toggleShowDays()" id="toggle_button_off" src="imgs/toggle_icon.png" alt="" > </img>
+				</div> -->
 				
 				<div class="all-countries">
 					<div class="single-country">
@@ -182,16 +197,9 @@
 					}
 				
 					if (showDays) {
-						document.getElementById('days1').style.display = 'block';
-						document.getElementById('days2').style.display = 'block';
-						document.getElementById('days3').style.display = 'block';
-						document.getElementById('days4').style.display = 'block';
-						document.getElementById('days5').style.display = 'block';
-						document.getElementById('days6').style.display = 'block';
-						document.getElementById('days7').style.display = 'block';
-						document.getElementById('days8').style.display = 'block';
-						document.getElementById('days9').style.display = 'block';
-						document.getElementById('days10').style.display = 'block';
+						for (let i = 1; i < 11; i++) {
+							document.getElementById('days' + i).style.display = 'block';
+						}
 						document.getElementById('showdays-button').style.backgroundColor = 'rgb(90, 90, 90)';
 					} else {
 						for (let i = 1; i < 11; i++) {
