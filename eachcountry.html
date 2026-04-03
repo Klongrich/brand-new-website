@@ -22,78 +22,79 @@
 		
 		<main>
 			<div class="container">	
-				<h2> Welcome to the Each Country Section! </h2>
+				<h2> Welcome to the Each Country Section!!! </h2>
 				
-				<!-- <button onclick="toggleShowDays()"> show days </button> -->
+				<button id="showdays-button" onclick="toggleShowDays()"> Show Days </button>
+				<button id="showdates-button" onclick="toggleShowDates()"> Show Dates </button>
 				
 				<div class="all-countries">
 					<div class="single-country">
 						<h3> Icleand </h3>
 						<h3 id="days1" style="display: none"> 3 days </h3>
-						<!-- <h4> April 7th - April 10th </h4> 474 316-->
+						<h4 id="dates1" style="display: none"> April 7th - April 10th </h4> 
 						<img src="./imgs/countryFlags/iceland_flag2.png" alt=""> </img>
 					</div>
 					
 					<div class="single-country">
 						<h3> Holland </h3>
 						<h3 id="days2" style="display: none" > 2 days </h3>
-						<!-- <h4> April 10th - April 12th </h4> -->
+						<h4 id="dates2" style="display: none"> April 10th - April 12th </h4>
 						<img src="./imgs/countryFlags/holland_flag.webp" alt=""> </img>
 					</div>
 					
 					<div class="single-country">
 						<h3> Belgium </h3>
 						<h3 id="days3" style="display: none"> 3 days </h3>
-						<!-- <h4> April 12th - April 15th </h4> -->
+						<h4 id="dates3" style="display: none"> April 12th - April 15th </h4>
 						<img src="./imgs/countryFlags/belguim_flag2.png" alt=""> </img>
 					</div>
 					
 					<div class="single-country">
 						<h3> France </h3>
 						<h3 id="days4" style="display: none"> 10 days </h3>
-						<!-- <h3> April 15th - April 25th </h3> -->
+						<h4 id="dates4" style="display: none"> April 15th - April 25th </h4>
 						<img src="./imgs/countryFlags/france_flag.webp" alt=""> </img>
 					</div>
 					
 					<div class="single-country">
 						<h3> Switzerland </h3>
 						<h3 id="days5" style="display: none" > 37 days </h3>
-						<!-- <h3> April 25th - May 4th | June 9th - July 5th </h3> -->
+						<h4 id="dates5" style="display: none"> April 25th - May 4th | June 9th - July 5th </h3>
 						<img src="./imgs/countryFlags/Switzerland2_flag.jpeg" alt=""> </img>
 					</div>
 					
 					<div class="single-country">
 						<h3> Italy </h3>
-						<!-- <h3> 2 days </h3> -->
-						<!-- <h3> May 4th - May 6th </h3> -->
+						<h3 id="days6" style="display: none" > 2 days </h3>
+						<h4 id="dates6" style="display: none"> May 4th - May 6th </h4>
 						<img src="./imgs/countryFlags/italy_flag.jpeg" alt=""> </img>
 					</div>
 					
 					<div class="single-country">
 						<h3> Germany </h3>
-						<!-- <h3> 6 days </h3> -->
-						<!-- <h3> May 6th - May 9th | May 19th - May 22nd </h3> -->
+						<h3 id="days7" style="display: none" > 6 days </h3>
+						<h4 id="dates7" style="display: none"> May 6th - May 9th | May 19th - May 22nd </h4>
 						<img src="./imgs/countryFlags/germany_flag.jpg" alt=""> </img>
 					</div>
 					
 					<div class="single-country">
 						<h3> Denmark </h3>
-						<!-- <h3> 5 days </h3> -->
-						<!-- <h3> May 9th - May 10th | May 15th - May 19th </h3> -->
+						<h3 id="days8" style="display: none" > 5 days </h3>
+						<h4 id="dates8" style="display: none"> May 9th - May 10th | May 15th - May 19th </h4>
 						<img src="./imgs/countryFlags/denmark_flag.png" alt=""> </img>
 					</div>
 					
 					<div class="single-country">
 						<h3> Sweden </h3>
-						<!-- <h3> 3 days </h3> -->
-						<!-- <h3> May 10th - May 13th </h3> -->
+						<h3 id="days9" style="display: none" > 3 days </h3>
+						<h4 id="dates9" style="display: none"> May 10th - May 13th </h4>
 						<img src="./imgs/countryFlags/sweden_flag.webp" alt=""> </img>
 					</div>
 					
 					<div class="single-country">
 						<h3> Norway </h3>
-						<!-- <h3> 2 days </h3> -->
-						<!-- <h3> May 13th - May 15th </h3> -->
+						<h3 id="days10" style="display: none" > 2 days </h3>
+						<h4 id="dates10" style="display: none"> May 13th - May 15th </h4>
 						<img src="./imgs/countryFlags/norway_flag.webp" alt=""> </img>
 					</div>
 					
@@ -171,11 +172,9 @@
 			
 			<script>
 				let showDays = false;
+				let showDates = false;
 				
-				function toggleShowDays() {
-					console.log("working");
-					console.log("show days: " + showDays)
-					
+				function toggleShowDays() {					
 					if (showDays) {
 						showDays  = false
 					} else {
@@ -188,12 +187,39 @@
 						document.getElementById('days3').style.display = 'block';
 						document.getElementById('days4').style.display = 'block';
 						document.getElementById('days5').style.display = 'block';
+						document.getElementById('days6').style.display = 'block';
+						document.getElementById('days7').style.display = 'block';
+						document.getElementById('days8').style.display = 'block';
+						document.getElementById('days9').style.display = 'block';
+						document.getElementById('days10').style.display = 'block';
+						document.getElementById('showdays-button').style.backgroundColor = 'rgb(90, 90, 90)';
 					} else {
-						document.getElementById('days1').style.display = 'none';
-						document.getElementById('days2').style.display = 'none';
-						document.getElementById('days3').style.display = 'none';
-						document.getElementById('days4').style.display = 'none';
-						document.getElementById('days5').style.display = 'none';
+						for (let i = 1; i < 11; i++) {
+							document.getElementById('days' + i).style.display = 'none';
+						}
+						document.getElementById('showdays-button').style.backgroundColor = 'rgb(72, 72, 72)';
+					}
+				}
+				
+				function toggleShowDates() {
+					console.log("working");
+					console.log("show dates: " + showDates)
+					if (showDates) {
+						showDates = false;
+					} else {
+						showDates = true;
+					}
+					
+					if (showDates) {
+						for (let i = 1; i < 11; i++) {
+							document.getElementById('dates' + i).style.display = 'block';
+						}
+						document.getElementById('showdates-button').style.backgroundColor = 'rgb(90, 90, 90)';
+					} else {
+						for (let i = 1; i < 11; i++) {
+							document.getElementById('dates' + i).style.display = 'none';
+						}
+						document.getElementById('showdates-button').style.backgroundColor = 'rgb(72, 72, 72';
 					}
 				}
 			

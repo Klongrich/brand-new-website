@@ -70,7 +70,18 @@ main{
 		margin-left: 50px;
 		margin-right: 50px;
 	}
-
+	
+	button {
+		background-color: rgb(72, 72, 72);
+		padding: 8px 35px;
+		margin-top: 20px;
+		border: 0px solid black;
+		border-radius: 5px;
+	    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	    transition: box-shadow 0.3s ease;
+		margin-bottom: 30px;
+		font-size: 18px;
+	}
 }
 
 @media screen and (min-width: 500px) {
@@ -84,6 +95,28 @@ main{
 		margin-left: 20px;
 		margin-right: 20px;
 	}
+	
+	button {
+		background-color: rgb(72, 72, 72);
+		padding: 8px 55px;
+		margin-top: 20px;
+		border: 0px solid black;
+		border-radius: 5px;
+	    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	    transition: box-shadow 0.3s ease;
+		margin-bottom: 30px;
+		font-size: 18px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	
+	button:hover{
+		background-color: purple;
+		cursor: pointer;
+		background-color: rgb(95, 95, 95);
+		
+	}
+	
 }
 
 .single-country {
@@ -94,6 +127,9 @@ main{
 	font-size: 15px;
 }
 
+.toggle_days {
+	text-align: right;
+}
 
 
 img {
