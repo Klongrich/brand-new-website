@@ -1,7 +1,8 @@
 body{
 	margin: 0 auto;
-	background-color: grey;
-	font-family: Arial;
+	background-color: #030712; 
+	color: #f9fafb;
+	font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 nav {
@@ -74,12 +75,20 @@ main{
 	}
 	
 	.image-project-box{
-		background-color: rgb(90, 90, 90);
+		background-color: rgba(17, 24, 39, 0.7);
+	    border: 1px solid rgba(255, 255, 255, 0.1);
+		transition: transform 0.3s ease, border-color 0.3s ease;
+	    border-radius: 20px; /* Softer, modern corners */
 		border-radius: 15px;
 	}
 	
+	.image-project-box:hover {
+	    transform: translateY(-5px);
+	    border-color: #00d1ff;
+	}
+	
 	button {
-		background-color: rgb(72, 72, 72);
+		background-color: #00d1ff;
 		padding: 8px 35px;
 		margin-top: 20px;
 		border: 0px solid black;
@@ -88,6 +97,7 @@ main{
 	    transition: box-shadow 0.3s ease;
 		margin-bottom: 30px;
 		font-size: 18px;
+		;
 	}
 }
 
@@ -107,22 +117,35 @@ main{
 	}
 	
 	.image-project-box{
-		background-color: rgb(90, 90, 90);
+		background-color: rgba(17, 24, 39, 0.7);
+	    border: 1px solid rgba(255, 255, 255, 0.1);
+		transition: transform 0.3s ease, border-color 0.3s ease;
+	    border-radius: 20px; /* Softer, modern corners */
 		border-radius: 15px;
 		padding-left: 3%;
 		padding-right: 3%;
 	}
 	
+	.image-project-box:hover {
+	    transform: translateY(-5px);
+	    border-color: #00d1ff;
+	}
+	
 	button {
-		background-color: rgb(72, 72, 72);
-		padding: 8px 75px;
-		margin-top: 20px;
-		border: 0px solid black;
-		border-radius: 5px;
-	    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		background-color: #00d1ff;
+	    padding: 12px 28px;
+	    border-radius: 50px; /* Pill shape */
+	    font-weight: 600;
+	    text-decoration: none;
+	    text-transform: uppercase;
+	    font-size: 0.85rem;
+	    letter-spacing: 1px;
+	    box-shadow: 0 0 20px rgba(0, 209, 255, 0.3);
 	    transition: box-shadow 0.3s ease;
-		margin-bottom: 30px;
-		font-size: 18px;
+	}
+	
+	button:hover{
+		  box-shadow: 0 0 35px rgba(0, 209, 255, 0.5);
 	}
 }
 
@@ -139,12 +162,12 @@ div {
 
 a {
 	text-decoration: underline;
-	color: black;
+	color: #00D1FF;
 	
 }
 
 a:hover {
-	color: rgb(58, 58, 58);
+	color: r#00D1FF;
 	cursor: pointer;
 }
 
@@ -154,24 +177,32 @@ img {
     object-fit: cover; /* Crop if needed without distortion */
     border-radius: 8px; /* Optional rounded corners */
     display: block;
+	border-radius: 12px;
+	box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+	border: 1px solid rgba(255,255,255,0.05);
 }
 
 
 button:hover {
-	background-color: rgb(76, 76, 76);
-	   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+ 	box-shadow: 0 0 35px rgba(0, 209, 255, 0.5);
 }
 
 .project-box{
-	background-color: rgb(90, 90, 90);
-	border-radius: 15px;
+	background-color: rgba(17, 24, 39, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: transform 0.3s ease, border-color 0.3s ease;
+    border-radius: 20px; /* Softer, modern corners */
 	padding-left: 3%;
 	padding-right: 3%;
 }
 
+.project-box:hover {
+    transform: translateY(-5px);
+    border-color: #00d1ff;
+}
+
 .inner-project-box{
-	background-color: rgb(58, 58, 58);
-	color: rgb(220, 220, 220);
+	color: #9ca3af;
 	border-radius: 15px;
 	margin-left: 10%;
 	margin-right: 10%;
@@ -181,8 +212,15 @@ button:hover {
 }
 
 .webProject {
-	background-color: rgb(58, 58, 58);
-	border-radius: 15px;
+	background-color: rgba(17, 24, 39, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: transform 0.3s ease, border-color 0.3s ease;
+    border-radius: 20px; /* Softer, modern corners */
+}
+
+.webProject:hover {
+    transform: translateY(-5px);
+    border-color: #00d1ff;
 }
 
 /* Code generator from Microsoft Co-Pilot */
