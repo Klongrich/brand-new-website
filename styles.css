@@ -1,14 +1,14 @@
 body{
 	margin: 0 auto;
-	background-color: grey;
+	background-color: #09090B;
 	font-family: Arial;
 }
 
 nav {
-	background-color: black;
+	background-color: #09090B;
 	position: fixed;
 	width: 100%;
-	border-bottom: 2px solid darkgrey;
+	border-bottom: 1px solid #27272A;
 	top: 0px;
 	z-index: 1;	
 }
@@ -38,6 +38,8 @@ nav ul {
 	nav li{
 		color: white;
 		font-size: 20px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
 	}
 }
 
@@ -67,37 +69,58 @@ main .welcome-holder{
 }
 
 button {
-	background-color: rgb(72, 72, 72);
+	background-color: #10B981;
 	padding: 5px 25px;
 	margin-top: 20px;
 	border: 0px solid black;
 	border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 15px rgba(16, 185, 129, 0.2);
+	color: black;
     transition: box-shadow 0.3s ease;
 }
 
 button:hover {
-	background-color: rgb(76, 76, 76);
-	   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+	background-color: #34D399;
+	 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 main .inner-holder{
-	background-color: rgb(90, 90, 90);
+	background-color: #18181B;
 	margin-left: 3%;
 	margin-right: 3%;
 	padding-top: 5px;
 	padding-bottom: 20px;
-	border-radius: 20px;
+	border-radius: 16px;
 	font-size: 20px;
+	transition: all 0.3s ease;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+main .inner-holder:hover{
+	border-color: #10b981;
+	transform: translateY(-5px);
 }
 
 main .welcome-inner-holder{
-	background-color: rgb(90, 90, 90);
+	background-color: #18181B;
 	margin-left: 3%;
 	margin-right: 3%;
 	padding-top: 5px;
 	padding-bottom: 50px;
 	border-radius: 20px;
+	transition: all 0.3s ease;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+main .welcome-inner-holder:hover{
+	border-color: #10b981;
+	transform: translateY(-5px);
+}
+
+
+
+h2 {
+	color: white;
 }
 
 main{
@@ -116,8 +139,8 @@ main .home p{
 
 
 main section{
-	background-color: rgb(58, 58, 58);
-	color: white;	
+	background-color: #18181B;
+	color: #A1A1AA;	
 	margin-left: 3%;
 	margin-right: 3%;
 	padding-bottom: 10px;
@@ -145,6 +168,9 @@ footer {
 	border-bottom: 1px solid lightgrey;
 }
 
+a {
+	text-decoration: none;
+}
 
 /*@media screen and (min-width: 501px) {
 	.container{
