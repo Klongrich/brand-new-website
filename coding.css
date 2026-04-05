@@ -6,12 +6,14 @@ body{
 }
 
 nav {
-	background-color: black;
 	position: fixed;
 	width: 100%;
-	border-bottom: 2px solid darkgrey;
 	top: 0px;
 	z-index: 1;	
+	
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 
@@ -124,6 +126,7 @@ main{
 		border-radius: 15px;
 		padding-left: 3%;
 		padding-right: 3%;
+		padding-top: 25px;
 	}
 	
 	.image-project-box:hover {
@@ -195,6 +198,18 @@ button:hover {
 	padding-left: 3%;
 	padding-right: 3%;
 }
+h2 {
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.project-box ul li {
+  color: #D1D5DB; /* Slightly brighter than the description but softer than the title */
+  margin-bottom: 8px;
+}
 
 .project-box:hover {
     transform: translateY(-5px);
@@ -232,13 +247,13 @@ ul {
 /*End of Generated Code*/
 
 footer {
-	background-color: black;
 	color: white;
 	position: relative;
 	top: 140px;
 	text-align: center;
 	padding: 3px;
 	font-size: 15px;
-	border-top: 1px solid lightgrey;
-	border-bottom: 1px solid lightgrey;
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
