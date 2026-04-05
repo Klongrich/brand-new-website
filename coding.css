@@ -247,6 +247,7 @@ ul {
 /*End of Generated Code*/
 
 footer {
+	background-color: rgba(255, 255, 255, 0.03); 
 	color: white;
 	position: relative;
 	top: 140px;
@@ -255,5 +256,5 @@ footer {
 	font-size: 15px;
     background: rgba(255, 255, 255, 0.03); 
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
