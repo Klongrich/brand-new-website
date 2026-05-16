@@ -124,6 +124,14 @@ main{
 	}
 }
 
+#ls-image-moblie {
+	display: none;
+}
+
+#ls-image {
+	display: none;
+}
+
 .flex-box img{
 	margin-top: 15px;	
 	margin-bottom: 15px;
