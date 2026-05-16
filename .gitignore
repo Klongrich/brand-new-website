@@ -1,0 +1,11 @@
+*.o
+*.swp
+*.swo
+*.pch
+*.tmp
+*.gch
+*.DS_Store
+other
+mine
+errors
+passed
