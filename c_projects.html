@@ -122,9 +122,25 @@
 				
 				<h2> ls - Unix Command </h2>
 				
-				<div class="ls-image"> 
-					<img src="./imgs/ls_project.png" alt="">
+				<div  class="ls-image"> 
+					<img id="ls-image-moblie" src="./imgs/ls_project_moblie.png" alt="">
+					<img id="ls-image" src="./imgs/ls_project.png" alt="">
 				</div>
+				
+				<script>
+					function set_ls_pic() {
+					    if (window.innerWidth <= 768) {
+							document.getElementById('ls-image-moblie').style.display = 'inline-block';
+							document.getElementById('ls-image').style.display = 'none';
+					    } else {
+							document.getElementById('ls-image-moblie').style.display = 'none';
+							document.getElementById('ls-image').style.display = 'inline-block';
+					    }
+					}
+					set_ls_pic();
+					
+			
+				</script>
 				
 				<a href="ls.html"> <button> Learn Morre </button> </a>
 				
