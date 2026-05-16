@@ -90,6 +90,13 @@ main{
 	    object-fit: cover; /* Crop if needed without distortion */
 	    border-radius: 8px; /* Optional rounded corners */
 	}
+	
+	.ls-image img {
+	    width: 100%;       /* Fill the grid cell width */
+	    height: auto;      /* Maintain aspect ratio */
+	    object-fit: cover; /* Crop if needed without distortion */
+	    border-radius: 8px; /* Optional rounded corners */	
+	}
 }
 
 @media screen and (min-width: 500px) {
@@ -108,6 +115,13 @@ main{
 	    object-fit: cover; /* Crop if needed without distortion */
 	    border-radius: 8px; /* Optional rounded corners */
 	}
+	
+	.ls-image img {
+	    width: 80%;       /* Fill the grid cell width */
+	    height: auto;      /* Maintain aspect ratio */
+	    object-fit: cover; /* Crop if needed without distortion */
+	    border-radius: 8px; /* Optional rounded corners */	
+	}
 }
 
 .flex-box img{
@@ -123,6 +137,7 @@ main{
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
 
 .functionLinks{
 	text-align: left;
