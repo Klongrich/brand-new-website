@@ -100,7 +100,17 @@ main{
 }
 
 
+.flags ul {
+	text-align: left;
+	
+}
 
+.flags li {
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+}
 
 /*End of Generated Code*/
 
