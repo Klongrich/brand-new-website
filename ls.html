@@ -29,7 +29,11 @@
 				<li> <b> <u> -R </b> </u> : Recursive function for reading all files and repos within the repo passed </li>
 				<li> <b> <u> -t </b> </u> :  Sort files by time last modified using <b> st_mtime</b> , <b> st_mtimespec.tv_nsec </b> , or by <b>lexicographic order  </b> </li>
 				<li> <b> <u> -u </b> </u> :  Sort files by time last accessed using <b> st_atime</b> , <b> st_atimespec.tv_nsec </b> , or by <b>lexicographic order  </b> </li>
-				<li> </li>
+				<li> <b> <u> -l </b> </u> :  Long Format prints out metadata consisting of <b> Type </b>, <b> Permissions </b>, <b>Number Of Links</b>, <b> User Owenr </b>, <b> Group Owner </b>, <b> Data Size </b>, <b> Time Last Modified.   </b> </li>
+				<ul>
+					<li> Type: This uses <b> S_ISDIR() - Directory </b>, <b> S_ISSOCK() - Socket File </b> , <b> S_ISFIFO() - FIFO pipe file </b> , <b> S_ISCHR() - character special device. </b> </li>
+				</ul>
+				<li> <b> <u> -f </b> </u> :  Do not sort files. Overrides any sort passed.  </b> </li>
 				<li> </li>
 				<li> </li>
 				<li> </li>
