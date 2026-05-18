@@ -31,7 +31,7 @@
 				<li> <b> <u> -u </b> </u> :  Sort files by time last accessed using <b> st_atime</b> , <b> st_atimespec.tv_nsec </b> , or by <b>lexicographic order  </b> </li>
 				<li> <b> <u> -l </b> </u> :  Long Format prints out metadata consisting of <b> Type </b>, <b> Permissions </b>, <b>Number Of Links</b>, <b> User Owenr </b>, <b> Group Owner </b>, <b> Data Size </b>, <b> Time Last Modified.   </b> </li>
 				<ul>
-					<li> Type of file: This uses: </li>
+					<li> Type of files uses: with a stat struct's <b> st_mode </b> as the parameter. </li>
 					<ul>
 						<li> <b> S_ISDIR() - Directory </b> </li>
 						<li> <b> S_ISSOCK() - Socket File </b> </li> 
@@ -40,6 +40,15 @@
 						<li> <b> S_ISBLK() - Block Devcies </b> </li>
 						<li> <b> S_ISREG() - Regular Files </b> </li>
 						<li> <b> S_ISLNK() - Symbolic Link </b> </li>
+					</ul>
+					<li> Permissions: Bitwise check using <b> st_mode </b> and macro value (st_mode & S_IRUSR) </li>
+					<ul>
+						<li> <b> S_IRUSR - User Read : 0400 </b> </li>
+						<li> <b> S_IWUSR - User Write : 0200 </b> </li> 
+						<li> <b> S_IXUSR - User Execute: 0100 </b> </li>
+						<li> <b> S_IRGRP - Group Read: 040 </b> </li>
+						<li> <b> S_IWGRP - Group Write: 020 </b> </li>
+						<li> <b> S_IXGRP - Group Execute: 010 </b> </li>
 					</ul>
 				</ul>
 				<li> <b> <u> -f </b> </u> :  Do not sort files. Overrides any sort passed.  </b> </li>
