@@ -58,7 +58,7 @@
 					<li> <b> Group Owner: </b> Uses <b> getgrgid() </b> with the stat structs value of <b> st_gid </b> for the parameter</li>
 					<li> <b> File Size</b> </li>
 						<ul>
-							<li> <b> Nomral File: </b> Uses the <b> st_size </b> value from the stat struct </li>
+							<li> <b> Normal File: </b> Uses the <b> st_size </b> value from the stat struct </li>
 							<li> <b> Character Special Devices </b> or <b> Block Devices: </b> Use <b> makedev() function </b> with <b> major() </b> and <b> minor() </b> return values as a parameters <b> st_rdev </b> value is passed as a paramter for major() and minor() functions used.
 							<ul> 
 								<li> Example: size = <b> makedev(major(statstruct.st_rdev), minor(statstruct.st_rdev)) </b> </li>
@@ -72,6 +72,13 @@
 				</ul>
 				<li> <b> <u> -f </b> </u> :  Do not sort files. Overrides any sort passed.  </b> </li>
 				<li> <b> <u> -d </b> </u> :  Print directories name, do not read files from it.  </b> </li>
+				<li> <b> <u> -G </b> </u> :  Print color depending on file type. </b> </li>
+				<ul>
+					<li> Normal Files: No color </li>
+					<li> Directory: <span style="color: blue;">  BLUE NONE </span>\033[34m </li>
+					<li> Sticky Bit: <span style="color: black; background-color: #00FF00;">BLACK GREEN</span> "\033[30;42m" </li>
+				<ul>
+				
 				<li> </li>
 				<li> </li>
 				<li> </li>
