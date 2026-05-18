@@ -55,6 +55,7 @@
 					</ul>
 					<li> <b> Number of Links: </b> Uses the <b> st_nlink </b> value from the stat struct </li>
 					<li> <b> User Owner: </b> Uses <b> getpwuid() </b> with the stat structs value of <b> st_uid </b> for the parameter</li>
+					<li> <b> Group Owner: </b> Uses <b> getgrgid() </b> with the stat structs value of <b> st_gid </b> for the parameter</li>
 				</ul>
 				<li> <b> <u> -f </b> </u> :  Do not sort files. Overrides any sort passed.  </b> </li>
 				<li> </li>
