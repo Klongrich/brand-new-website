@@ -77,16 +77,18 @@
 				<li> <b> <u> -d </b> </u> :  Print directories name, do not read files from it.  </b> </li>
 				<li> <b> <u> -G </b> </u> :  Print color depending on file type. </b> </li>
 				<ul>
-					<li> Normal Files: No color </li>
-					<li> Directory: <span style="color: blue;">  BLUE NONE </span>\033[34m </li>
-					<li> Sticky Bit: <span style="color: black; background-color: #00FF00;">BLACK GREEN</span> "\033[30;42m" </li>
+					<li> <b> Normal Files: </b> No color </li>
+					<li> <b> Directory: </b> <span style="color: blue;">BLUE</span> \033[34m </li>
+					<li> <b> Excuctable: </b> <span style="color: red;">RED</span> \033[31m </li>
+					<li> <b> Symbolic Link: </b> <span style="color: magenta">MAGENTA</span> \033[35m</li>
+					<li> <b> Socket File: </b> <span style="color: green">GREEN</span> \033[32m</li>
+					<li> <b> FIFO pipe: </b> <span style="color:yellow">YELLOW</span> \033[33m </li>
+					<li> <b> Character Device: </b> <span style="color: blue; background-color: Yellow">BLUE YELLOW</span> \033[34;43m</li>
+					<li> <b> Block Device: </b> <span style="color: blue; background-color: cyan">BLUE CYAN</span> \033[34;46m </li>
+					<li> <b> Sticky Bit: </b> <span style="color: black; background-color: green;">BLACK GREEN</span> \033[30;42m </li>
+					<li> <b> Is User Set-ID & Excuctable: </b> <span style="color: black; background-color: red">BLACK RED</span> \033[30;41m </li>
+					<li> <b> Is Group Set-ID & Excuctable: </b> <span style="color: black; background-color: cyan">BLACK CYAN</span> \033[30;46m </li>
 				<ul>
-				
-				<li> </li>
-				<li> </li>
-				<li> </li>
-				<li> </li>
-				<li> </li>
 			</u>
 		</div>
 			<p> Coming Soon! </p>
