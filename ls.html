@@ -29,9 +29,9 @@
 				<li> <b> <u> -R </b> </u> : Recursive function for reading all files and repos within the repo passed </li>
 				<li> <b> <u> -t </b> </u> :  Sort files by time last modified using <b> st_mtime</b> , <b> st_mtimespec.tv_nsec </b> , or by <b>lexicographic order  </b> </li>
 				<li> <b> <u> -u </b> </u> :  Sort files by time last accessed using <b> st_atime</b> , <b> st_atimespec.tv_nsec </b> , or by <b>lexicographic order  </b> </li>
-				<li> <b> <u> -l </b> </u> :  Long Format prints out metadata consisting of <b> Type </b>, <b> Permissions </b>, <b>Number Of Links</b>, <b> User Owenr </b>, <b> Group Owner </b>, <b> Data Size </b>, <b> Time Last Modified.   </b> </li>
+				<li> <b> <u> -l </b> </u> :  Long Format prints out metadata consisting of <b> Type </b>, <b> Permissions </b>, <b>Number Of Links</b>, <b> User Owner </b>, <b> Group Owner </b>, <b> Data Size </b>, <b> Time Last Modified.   </b> </li>
 				<ul>
-					<li> Type of files uses: with a stat struct's <b> st_mode </b> as the parameter. </li>
+					<li> <b> Type of file </b> uses: with a stat struct's <b> st_mode </b> as the parameter. </li>
 					<ul>
 						<li> <b> S_ISDIR() - Directory </b> </li>
 						<li> <b> S_ISSOCK() - Socket File </b> </li> 
@@ -41,7 +41,7 @@
 						<li> <b> S_ISREG() - Regular Files </b> </li>
 						<li> <b> S_ISLNK() - Symbolic Link </b> </li>
 					</ul>
-					<li> Permissions: Bitwise check using <b> st_mode </b> and macro value (st_mode & S_IRUSR) </li>
+					<li> <b> Permissions: </b> Bitwise check using <b> st_mode </b> and macro value (st_mode & S_IRUSR) </li>
 					<ul>
 						<li> <b> S_IRUSR - User Read : 0400 </b> </li>
 						<li> <b> S_IWUSR - User Write : 0200 </b> </li> 
@@ -49,7 +49,12 @@
 						<li> <b> S_IRGRP - Group Read: 040 </b> </li>
 						<li> <b> S_IWGRP - Group Write: 020 </b> </li>
 						<li> <b> S_IXGRP - Group Execute: 010 </b> </li>
+						<li> <b> S_IROTH - Other Read: 04 </b> </li>
+						<li> <b> S_IWOTH - Other Write: 02 </b> </li>
+						<li> <b> S_IXOTH - Other Excecute: 01 </b> </li>
 					</ul>
+					<li> <b> Number of Links: </b> Uses the <b> st_nlink </b> value from the stat struct </li>
+					<li> <b> User Owner: </b> Uses <b> getpwuid() </b> with the stat structs value of <b> st_uid </b> for the parameter</li>
 				</ul>
 				<li> <b> <u> -f </b> </u> :  Do not sort files. Overrides any sort passed.  </b> </li>
 				<li> </li>
