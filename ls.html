@@ -29,7 +29,7 @@
 				<li> <b> <u> -R </b> </u> : Recursive function for reading all files and repos within the repo passed </li>
 				<li> <b> <u> -t </b> </u> :  Sort files by time last modified using <b> st_mtime</b> , <b> st_mtimespec.tv_nsec </b> , or by <b>lexicographic order  </b> </li>
 				<li> <b> <u> -u </b> </u> :  Sort files by time last accessed using <b> st_atime</b> , <b> st_atimespec.tv_nsec </b> , or by <b>lexicographic order  </b> </li>
-				<li> <b> <u> -l </b> </u> :  Long Format prints out metadata consisting of <b> Type </b>, <b> Permissions </b>, <b>Number Of Links</b>, <b> User Owner </b>, <b> Group Owner </b>, <b> Data Size </b>, <b> Time Last Modified.   </b> </li>
+				<li> <b> <u> -l </b> </u> :  Long Format prints out metadata consisting of <b> Type </b>, <b> Permissions </b>, <b>Number Of Links</b>, <b> User Owner </b>, <b> Group Owner </b>, <b> File Size </b>, <b> Time Last Modified.   </b> </li>
 				<ul>
 					<li> <b> Type of file </b> uses: with a stat struct's <b> st_mode </b> as the parameter. </li>
 					<ul>
@@ -56,6 +56,15 @@
 					<li> <b> Number of Links: </b> Uses the <b> st_nlink </b> value from the stat struct </li>
 					<li> <b> User Owner: </b> Uses <b> getpwuid() </b> with the stat structs value of <b> st_uid </b> for the parameter</li>
 					<li> <b> Group Owner: </b> Uses <b> getgrgid() </b> with the stat structs value of <b> st_gid </b> for the parameter</li>
+					<li> <b> File Size</b> </li>
+						<ul>
+							<li> <b> Nomral File: </b> Uses the <b> st_size </b> value from the stat struct </li>
+							<li> <b> Character Special Devices </b> or <b> Block Devices: </b> Use <b> makedev() function </b> with <b> major() </b> and <b> minor() </b> return values as a parameters <b> st_rdev </b> value is passed as a paramter for major() and minor() functions used.
+							<ul> 
+								<li> Example: size = <b> makedev(major(statstruct.st_rdev), minor(statstruct.st_rdev)) </b> </li>
+							</ul>
+						</ul>
+					<li> <b> Time Last Modified: </b> </li>
 				</ul>
 				<li> <b> <u> -f </b> </u> :  Do not sort files. Overrides any sort passed.  </b> </li>
 				<li> </li>
