@@ -75,7 +75,7 @@
 				</ul>
 				<li> <b> <u> -f </b> </u> :  Do not sort files. Overrides any sort passed.  </b> </li>
 				<li> <b> <u> -d </b> </u> :  Print directories name, do not read files from it.  </b> </li>
-				<li> <b> <u> -G </b> </u> :  Print color depending on file type. </b> </li>
+				<li> <b> <u> -G </b> </u> :  Print color depending on file type. Uses ANSI Escape Codes to set color using write </b> </li>
 				<ul>
 					<li> <b> Normal Files: </b> No color </li>
 					<li> <b> Directory: </b> <span style="color: blue;">BLUE</span> \033[34m </li>
@@ -88,9 +88,16 @@
 					<li> <b> Sticky Bit: </b> <span style="color: black; background-color: green;">BLACK GREEN</span> \033[30;42m </li>
 					<li> <b> Is User Set-ID & Excuctable: </b> <span style="color: black; background-color: red">BLACK RED</span> \033[30;41m </li>
 					<li> <b> Is Group Set-ID & Excuctable: </b> <span style="color: black; background-color: cyan">BLACK CYAN</span> \033[30;46m </li>
-				<ul>
-			</u>
+				</ul>
+				<li> <b> <u> -r </u> </b> : Reverse sort </li>
+				<li> <b> <u> -a </u> </b> : List hidden files </li>
 		</div>
+		
+			<h2> General Types </h2>
+			
+			<p> This program uses <b> readdir() </b> </p>
+			
+			<br> <br>
 			<p> Coming Soon! </p>
 
 			<h2> Things Covered </h2>
