@@ -25,11 +25,77 @@
 				<div class="welcome-inner-holder">
 					<h2> Kyle James Longrich </h2>
 					<section>
-							<p> Welcome to my website </p>
-						<!-- <p> This is not a portfoilio website. I am not an indie dev. I am not a self taught dev. I am not a digital nomad. I do not build in public.  </p> -->
-						<!-- <p> Here is my ultimate portfolio website. I am an indie dev as well as self taught dev. I am a digital nomad. Building in public is the future. I strive to always be building in public. Check out some projects listed below. </p>
-						<a style="color: #34D399; text-decoration: underline" href="digitalnomad.html"> The why of the digital nomad</a> -->
-						<!-- <p> This is intened to share information online without the use of social media. </p> -->
+							<h3> Recent Project Showcase </h3>
+							<h3> ls - unix command </h3>
+								<p> Supported Flags: -R -t -u -l -f -d -G -r -a </p>
+								<div class="flags">
+								<ul style="list-style-type:none">
+									<li> <b> <u> -R </b> </u> : Recursive function for reading all files and repos within the repo passed </li>
+									<li> <b> <u> -t </b> </u> :  Sort files by time last modified using <b> st_mtime</b> , <b> st_mtimespec.tv_nsec </b> , or by <b>lexicographic order  </b> </li>
+									<li> <b> <u> -u </b> </u> :  Sort files by time last accessed using <b> st_atime</b> , <b> st_atimespec.tv_nsec </b> , or by <b>lexicographic order  </b> </li>
+									<li> <b> <u> -l </b> </u> :  Long Format prints out metadata consisting of <b> Type </b>, <b> Permissions </b>, <b>Number Of Links</b>, <b> User Owner </b>, <b> Group Owner </b>, <b> File Size </b>, <b> Time Last Modified.   </b> </li>
+									<ul>
+										<li> <b> Type of file </b> uses: with a stat struct's <b> st_mode </b> as the parameter. </li>
+										<ul>
+											<li> <b> S_ISDIR() - Directory </b> </li>
+											<li> <b> S_ISSOCK() - Socket File </b> </li> 
+											<li> <b> S_ISFIFO() - FIFO pipe file </b> </li>
+											<li> <b> S_ISCHR() - character special device. </b> </li>
+											<li> <b> S_ISBLK() - Block Devcies </b> </li>
+											<li> <b> S_ISREG() - Regular Files </b> </li>
+											<li> <b> S_ISLNK() - Symbolic Link </b> </li>
+										</ul>
+										<li> <b> Permissions: </b> Bitwise check using <b> st_mode </b> and macro value (st_mode & S_IRUSR) </li>
+										<ul>
+											<li> <b> S_IRUSR - User Read : 0400 </b> </li>
+											<li> <b> S_IWUSR - User Write : 0200 </b> </li> 
+											<li> <b> S_ISUID - User Set-ID : 04000 </b> </li>
+											<li> <b> S_IXUSR - User Execute: 0100 </b> </li>
+											<li> <b> S_IRGRP - Group Read: 040 </b> </li>
+											<li> <b> S_IWGRP - Group Write: 020 </b> </li>
+											<li> <b> S_ISGID - Group Set-ID: 02000 </b></li>
+											<li> <b> S_IXGRP - Group Execute: 010 </b> </li>
+											<li> <b> S_IROTH - Other Read: 04 </b> </li>
+											<li> <b> S_IWOTH - Other Write: 02 </b> </li>
+											<li> <b> S_ISVTX - Sticky Bit: 01000 </b> </li>
+											<li> <b> S_IXOTH - Other Excecute: 01 </b> </li>
+										</ul>
+										<li> <b> Number of Links: </b> Uses the <b> st_nlink </b> value from the stat struct </li>
+										<li> <b> User Owner: </b> Uses <b> getpwuid() </b> with the stat structs value of <b> st_uid </b> for the parameter</li>
+										<li> <b> Group Owner: </b> Uses <b> getgrgid() </b> with the stat structs value of <b> st_gid </b> for the parameter</li>
+										<li> <b> File Size</b> </li>
+											<ul>
+												<li> <b> Normal File: </b> Uses the <b> st_size </b> value from the stat struct </li>
+												<li> <b> Character Special Devices </b> or <b> Block Devices: </b> Use <b> makedev() function </b> with <b> major() </b> and <b> minor() </b> return values as a parameters <b> st_rdev </b> value is passed as a paramter for major() and minor() functions used.
+												<ul> 
+													<li> Example: size = <b> makedev(major(statstruct.st_rdev), minor(statstruct.st_rdev)) </b> </li>
+												</ul>
+											</ul>
+										<li> <b> Time Last Modified: </b> uses the <b> time(NULL) </b> to get current time. Then uses <b> ctime() </b> with the stat structs <b> st_mtime </b> vlaue as a parameter. </li>
+										<ul>
+											<li> <b> Not modifed longer than 6 months: </b> Month, Date, Year </li>
+											<li> <b> Modifed within past 6 motnhs: </b> Month, Day, Time </li>
+										</ul>
+									</ul>
+									<li> <b> <u> -f </b> </u> :  Do not sort files. Overrides any sort passed.  </b> </li>
+									<li> <b> <u> -d </b> </u> :  Print directories name, do not read files from it.  </b> </li>
+									<li> <b> <u> -G </b> </u> :  Print color depending on file type. Uses ANSI Escape Codes to set color using write </b> </li>
+									<ul>
+										<li> <b> Normal Files: </b> No color </li>
+										<li> <b> Directory: </b> <span style="color: blue;">BLUE</span> \033[34m </li>
+										<li> <b> Excuctable: </b> <span style="color: red;">RED</span> \033[31m </li>
+										<li> <b> Symbolic Link: </b> <span style="color: magenta">MAGENTA</span> \033[35m</li>
+										<li> <b> Socket File: </b> <span style="color: green">GREEN</span> \033[32m</li>
+										<li> <b> FIFO pipe: </b> <span style="color:yellow">YELLOW</span> \033[33m </li>
+										<li> <b> Character Device: </b> <span style="color: blue; background-color: Yellow">BLUE YELLOW</span> \033[34;43m</li>
+										<li> <b> Block Device: </b> <span style="color: blue; background-color: cyan">BLUE CYAN</span> \033[34;46m </li>
+										<li> <b> Sticky Bit: </b> <span style="color: black; background-color: green;">BLACK GREEN</span> \033[30;42m </li>
+										<li> <b> Is User Set-ID & Excuctable: </b> <span style="color: black; background-color: red">BLACK RED</span> \033[30;41m </li>
+										<li> <b> Is Group Set-ID & Excuctable: </b> <span style="color: black; background-color: cyan">BLACK CYAN</span> \033[30;46m </li>
+									</ul>
+									<li> <b> <u> -r </u> </b> : Reverse sort </li>
+									<li> <b> <u> -a </u> </b> : List hidden files </li>
+							</div>
 					</section>
 				</div>
 			</div>

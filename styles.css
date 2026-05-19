@@ -45,6 +45,18 @@ body{
 	}
 }
 
+.flags ul {
+	text-align: left;
+	line-height: 1.5;
+	
+}
+
+.flags li {
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+}
 
 .nav li a {
 	text-decoration: none;
@@ -114,10 +126,10 @@ main .welcome-inner-holder{
 	border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-main .welcome-inner-holder:hover{
+/*main .welcome-inner-holder:hover{
 	border-color: #10b981;
 	transform: translateY(-5px);
-}
+}*/
 
 
 
