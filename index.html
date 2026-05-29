@@ -41,7 +41,7 @@
 											<li> <b> S_ISSOCK() - Socket File </b> </li> 
 											<li> <b> S_ISFIFO() - FIFO pipe file </b> </li>
 											<li> <b> S_ISCHR() - character special device. </b> </li>
-											<li> <b> S_ISBLK() - Block Devcies </b> </li>
+											<li> <b> S_ISBLK() - Block Devices </b> </li>
 											<li> <b> S_ISREG() - Regular Files </b> </li>
 											<li> <b> S_ISLNK() - Symbolic Link </b> </li>
 										</ul>
@@ -58,7 +58,7 @@
 											<li> <b> S_IROTH - Other Read: 04 </b> </li>
 											<li> <b> S_IWOTH - Other Write: 02 </b> </li>
 											<li> <b> S_ISVTX - Sticky Bit: 01000 </b> </li>
-											<li> <b> S_IXOTH - Other Excecute: 01 </b> </li>
+											<li> <b> S_IXOTH - Other Execute: 01 </b> </li>
 										</ul>
 										<li> <b> Number of Links: </b> Uses the <b> st_nlink </b> value from the stat struct </li>
 										<li> <b> User Owner: </b> Uses <b> getpwuid() </b> with the stat structs value of <b> st_uid </b> for the parameter</li>
@@ -66,24 +66,24 @@
 										<li> <b> File Size</b> </li>
 											<ul>
 												<li> <b> Normal File: </b> Uses the <b> st_size </b> value from the stat struct </li>
-												<li> <b> Character Special Devices </b> or <b> Block Devices: </b> Use <b> makedev() function </b> with <b> major() </b> and <b> minor() </b> return values as a parameters <b> st_rdev </b> value is passed as a paramter for major() and minor() functions used.
+												<li> <b> Character Special Devices </b> or <b> Block Devices: </b> Use <b> makedev() function </b> with <b> major() </b> and <b> minor() </b> return values as parameters. <b> st_rdev </b> value is passed as a parameter for major() and minor() functions used.
 												<ul> 
 													<li> Example: size = <b> makedev(major(statstruct.st_rdev), minor(statstruct.st_rdev)) </b> </li>
 												</ul>
 											</ul>
-										<li> <b> Time Last Modified: </b> uses the <b> time(NULL) </b> to get current time. Then uses <b> ctime() </b> with the stat structs <b> st_mtime </b> vlaue as a parameter. </li>
+										<li> <b> Time Last Modified: </b> uses the <b> time(NULL) </b> to get current time. Then uses <b> ctime() </b> with the stat structs <b> st_mtime </b> value as a parameter. </li>
 										<ul>
-											<li> <b> Not modifed longer than 6 months: </b> Month, Date, Year </li>
-											<li> <b> Modifed within past 6 months: </b> Month, Day, Time </li>
+											<li> <b> Not modified longer than 6 months: </b> Month, Date, Year </li>
+											<li> <b> Modified  within past 6 months: </b> Month, Day, Time </li>
 										</ul>
 									</ul>
 									<li> <b> <u> -f </b> </u> :  Do not sort files. Overrides any sort passed.  </b> </li>
-									<li> <b> <u> -d </b> </u> :  Print directories name, do not read files from it.  </b> </li>
+									<li> <b> <u> -d </b> </u> :  Print the directories name, do not read files from it.  </b> </li>
 									<li> <b> <u> -G </b> </u> :  Print color depending on file type. Uses ANSI Escape Codes to set color using write </b> </li>
 									<ul>
 										<li> <b> Normal Files: </b> No color </li>
 										<li> <b> Directory: </b> <span style="color: blue;">BLUE</span> \033[34m </li>
-										<li> <b> Excuctable: </b> <span style="color: red;">RED</span> \033[31m </li>
+										<li> <b> Executable: </b> <span style="color: red;">RED</span> \033[31m </li>
 										<li> <b> Symbolic Link: </b> <span style="color: magenta">MAGENTA</span> \033[35m</li>
 										<li> <b> Socket File: </b> <span style="color: green">GREEN</span> \033[32m</li>
 										<li> <b> FIFO pipe: </b> <span style="color:yellow">YELLOW</span> \033[33m </li>
